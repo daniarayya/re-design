@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Berita - Biro Otonomi Daerah dan Kerjasama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Memanggil CSS Eksternal -->
+    <link rel="stylesheet" href="berita.css">    
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo Jawa Tengah" class="logo-img">
+                <div class="logo-text">
+                    Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
+                </div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                
+                <!-- Menu Layanan dengan Dropdown -->
+                <li class="dropdown">
+                    <a href="#" id="layananBtn">Layanan <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="https://sedunia.jatengprov.go.id/">SEDUNIA</a></li>
+                        <li><a href="https://sikejam.jatengprov.go.id/">SIKEJAM</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="dokumen.html">Dokumen</a></li>
+                <li><a href="berita.html" class="active">Berita</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Header Banner dengan Foto dan Teks -->
+    <section class="hero-header">
+        <div class="hero-header-overlay"></div>
+        <img src="img/header.png" alt="Header Banner" class="hero-header-img">
+        <div class="hero-header-content">
+            <h1>Berita</h1>
+            <p>Dapatkan berita terbaru seputar kegiatan, program dan perkembangan Biro Otonomi Daerah dan Kerjasama Pemerintahan Provinsi Jawa Tengah</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container-berita">
+        <!-- Tombol Filter Kategori -->
+        <div class="kategori-filter">
+            <button class="btn-kategori active" onclick="filterKategori(this, 'semua')">Semua</button>
+            <button class="btn-kategori" onclick="filterKategori(this, 'otonomi')">Otonomi Daerah</button>
+            <button class="btn-kategori" onclick="filterKategori(this, 'kerjasama')">Kerjasama</button>
+            <button class="btn-kategori" onclick="filterKategori(this, 'pemerintahan')">Pemerintahan</button>
+        </div>
+
+        <div class="berita-layout">
+            
+            <!-- KOLOM KIRI: Daftar Berita -->
+            <div class="berita-utama">
+                
+                <!-- Berita 1 -->
+                <div class="berita-card" data-kategori="kerjasama">
+                    <div class="berita-img-wrapper">
+                        <img src="img/berita1.jpg" alt="Kerjasama YKKS">
+                        <span class="badge badge-merah">Kerjasama</span>
+                    </div>
+                    <div class="berita-info">
+                        <div class="berita-tanggal">
+                            <i class="far fa-calendar-alt"></i> 28 Oktober 2026
+                        </div>
+                        <h2 class="berita-judul">PEMERINTAH PROVINSI JAWA TENGAH GELAR MONITORING BERSAMA PROGRAM YKKS....</h2>
+                        <p class="berita-deskripsi">Semarang – Yayasan Kesejahteraan dan Keselamatan Sosial (YKKS) dan ChildFund International di Indonesia menyelenggarakan Pertemuan Koordinasi dan....</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn-selengkapnya">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Berita 2 -->
+                <div class="berita-card" data-kategori="otonomi">
+                    <div class="berita-img-wrapper">
+                        <img src="img/berita2.jpg" alt="Otonomi Daerah">
+                        <span class="badge badge-hijau">Otonomi Daerah</span>
+                    </div>
+                    <div class="berita-info">
+                        <div class="berita-tanggal">
+                            <i class="far fa-calendar-alt"></i> 22 Oktober 2026
+                        </div>
+                        <h2 class="berita-judul">Pemerintah Provinsi Jawa Tengah menerima Delegasi Studi Strategis Dalam Negeri (SSDN) Pendidikan.....</h2>
+                        <p class="berita-deskripsi">Semarang, 8 September 2026 - Pemerintah Provinsi Jawa Tengah menerima Delegasi Studi Strategis Dalam Negeri (SSDN) Pendidikan Penyiapan dan Pemanfaatan Pimpinan.....</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn-selengkapnya">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Berita 3 -->
+                <div class="berita-card" data-kategori="kerjasama">
+                    <div class="berita-img-wrapper">
+                        <img src="img/berita3.jpg" alt="Kerjasama India">
+                        <span class="badge badge-merah">Kerjasama</span>
+                    </div>
+                    <div class="berita-info">
+                        <div class="berita-tanggal">
+                            <i class="far fa-calendar-alt"></i> 18 Juni 2026
+                        </div>
+                        <h2 class="berita-judul">Gubernur Jawa Tengah Tawarkan Peluang Investasi Baru kepada Pengusaha India</h2>
+                        <p class="berita-deskripsi">Semarang - Gubernur Jawa Tengah, Ahmad Luthfi, terus mendorong peningkatan kerja sama investasi dengan India sekaligus membuka berbagai peluang investasi baru....</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn-selengkapnya">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Berita 4 -->
+                <div class="berita-card" data-kategori="otonomi">
+                    <div class="berita-img-wrapper">
+                        <img src="img/berita4.jpg" alt="Otonomi Daerah">
+                        <span class="badge badge-hijau">Otonomi Daerah</span>
+                    </div>
+                    <div class="berita-info">
+                        <div class="berita-tanggal">
+                            <i class="far fa-calendar-alt"></i> 9 September 2026
+                        </div>
+                        <h2 class="berita-judul">Monitoring dan Evaluasi Terpadu Penerapan SPM Tahun 2026 di Kota Surakarta</h2>
+                        <p class="berita-deskripsi">SURAKARTA — Pemerintah Kota Surakarta bersama Pemerintah Provinsi Jawa Tengah menggelar kegiatan Monitoring dan Evaluasi (Money) Terpadu Sekretariat....</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn-selengkapnya">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Berita 5 -->
+                <div class="berita-card" data-kategori="pemerintahan">
+                    <div class="berita-img-wrapper">
+                        <img src="img/berita5.jpg" alt="Pemerintahan">
+                        <span class="badge badge-kuning">Pemerintahan</span>
+                    </div>
+                    <div class="berita-info">
+                        <div class="berita-tanggal">
+                            <i class="far fa-calendar-alt"></i> 20 Juni 2026
+                        </div>
+                        <h2 class="berita-judul">Rapat Koordinasi Koreksi dan Verifikasi Lapangan Batas Daerah Brebes-Tegal</h2>
+                        <p class="berita-deskripsi">Tegal - 17–18 Juni 2026 — Pemerintah Provinsi Jawa Tengah bersama Pemerintah Kabupaten Brebes dan Kabupaten Tegal melaksanakan Rapat Koordinasi Koreksi dan Verifikasi....</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn-selengkapnya">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Berita 3 -->
+                <div class="berita-card" data-kategori="kerjasama">
+                    <div class="berita-img-wrapper">
+                        <img src="img/berita3.jpg" alt="Kerjasama India">
+                        <span class="badge badge-merah">Kerjasama</span>
+                    </div>
+                    <div class="berita-info">
+                        <div class="berita-tanggal">
+                            <i class="far fa-calendar-alt"></i> 18 Juni 2026
+                        </div>
+                        <h2 class="berita-judul">Gubernur Jawa Tengah Tawarkan Peluang Investasi Baru kepada Pengusaha India</h2>
+                        <p class="berita-deskripsi">Semarang - Gubernur Jawa Tengah, Ahmad Luthfi, terus mendorong peningkatan kerja sama investasi dengan India sekaligus membuka berbagai peluang investasi baru....</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn-selengkapnya">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">&raquo;</a>
+                </div>
+
+            </div>
+
+            <!-- KOLOM KANAN: Berita Populer -->
+            <aside class="berita-populer">
+                <h2 class="populer-title">Berita Populer</h2>
+                <div class="populer-list">
+                    
+                    <div class="populer-item">
+                        <div class="populer-num">1</div>
+                        <img src="img/populer1.jpg" alt="Populer 1" class="populer-img">
+                        <div class="populer-text">
+                            <h3>Rapat Koordinasi Daerah</h3>
+                            <span class="populer-date"><i class="far fa-calendar-alt"></i> 18 Juni 2026</span>
+                        </div>
+                    </div>
+                    
+                    <div class="populer-item">
+                        <div class="populer-num">2</div>
+                        <img src="img/populer2.jpg" alt="Populer 2" class="populer-img">
+                        <div class="populer-text">
+                            <h3>Bimbingan Teknis Laporan Penyelenggaraan Pemerintahan Daerah</h3>
+                            <span class="populer-date"><i class="far fa-calendar-alt"></i> 15 Juni 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="populer-item">
+                        <div class="populer-num">3</div>
+                        <img src="img/populer3.jpg" alt="Populer 3" class="populer-img">
+                        <div class="populer-text">
+                            <h3>Pemprov Jateng Tekankan Penguatan Tata Kelola Pemerintahan</h3>
+                            <span class="populer-date"><i class="far fa-calendar-alt"></i> 18 Juni 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="populer-item">
+                        <div class="populer-num">4</div>
+                        <img src="img/populer4.jpg" alt="Populer 4" class="populer-img">
+                        <div class="populer-text">
+                            <h3>Rapat Verifikasi Lapangan Batas Daerah</h3>
+                            <span class="populer-date"><i class="far fa-calendar-alt"></i> 18 Juni 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="populer-item">
+                        <div class="populer-num">5</div>
+                        <img src="img/populer5.jpg" alt="Populer 5" class="populer-img">
+                        <div class="populer-text">
+                            <h3>Peluang Investasi Baru ke Pengusaha India</h3>
+                            <span class="populer-date"><i class="far fa-calendar-alt"></i> 18 Juni 2026</span>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <!-- Bagian Kiri: Logo & Judul -->
+            <div class="footer-left">
+                <img src="img/logo.png" alt="Logo Jawa Tengah" class="footer-logo">
+                <div class="footer-title">
+                    BIRO PEMERINTAHAN,<br>
+                    OTONOMI DAERAH &<br>
+                    KERJA SAMA PROVINSI<br>
+                    JAWA TENGAH
+                </div>
+            </div>
+
+            <!-- Bagian Kanan: Sosial Media -->
+            <div class="footer-right">
+                <div class="social-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>biropemotdaks_jateng</span>
+                </div>
+                <div class="social-item">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Biropemotdaks_jateng</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Garis Pembatas -->
+        <div class="footer-divider"></div>
+
+        <!-- Bagian Bawah: Copyright -->
+        <div class="footer-bottom">
+            &copy; 2026 Biro Pemerintahan, Otonomi Daerah & Kerja Sama Provinsi Jawa Tengah
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. LOGIKA DROPDOWN NAVBAR ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownContainer = document.querySelector('.dropdown');
+            const layananBtn = document.getElementById('layananBtn');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+
+            dropdownContainer.addEventListener('mouseenter', function() {
+                dropdownMenu.classList.add('show');
+            });
+
+            dropdownContainer.addEventListener('mouseleave', function() {
+                dropdownMenu.classList.remove('show');
+            });
+
+            layananBtn.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                dropdownMenu.classList.toggle('show');
+            });
+
+            window.addEventListener('click', function(event) {
+                if (!event.target.closest('.dropdown')) {
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                }
+            });
+        });
+
+        // --- 2. LOGIKA FILTER KATEGORI BERITA ---
+        function filterKategori(button, kategori) {
+            // 1. Ubah status 'active' pada tombol
+            const buttons = document.querySelectorAll('.btn-kategori');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // 2. Ambil semua kartu berita
+            const beritaCards = document.querySelectorAll('.berita-card');
+
+            // 3. Sembunyikan semua kartu terlebih dahulu
+            beritaCards.forEach(card => {
+                card.style.display = 'none';
+            });
+
+            // 4. Tampilkan kartu sesuai kategori
+            if (kategori === 'semua') {
+                beritaCards.forEach(card => {
+                    card.style.display = 'flex'; // Kembalikan ke display flex (default layout grid)
+                });
+            } else {
+                // Filter berdasarkan atribut data-kategori
+                const filteredCards = document.querySelectorAll(`.berita-card[data-kategori="${kategori}"]`);
+                filteredCards.forEach(card => {
+                    card.style.display = 'flex';
+                });
+            }
+        }
+    </script>
+</body>
+</html>

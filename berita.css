@@ -1,0 +1,582 @@
+/* =========================================
+   RESET & BASE STYLES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Background abu sangat muda agar kartu berita menonjol */
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* =========================================
+   NAVBAR STYLES
+   ========================================= */
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000000;
+}
+
+.logo-text span {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0b1a3d;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    border-bottom: 3px solid #0b1a3d;
+    font-weight: 600;
+}
+
+/* =========================================
+   DROPDOWN STYLES
+   ========================================= */
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0b1a3d;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 1001;
+    padding: 8px 0;
+    margin-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ffffff !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: #1a2f5e;
+}
+
+.fa-chevron-down {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* =========================================
+   HERO HEADER (FOTO + TEKS)
+   ========================================= */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+
+.hero-header-content {
+    position: relative;
+    z-index: 3;
+    padding-left: 80px;
+    max-width: 700px;
+}
+
+.hero-header-content h1 {
+    font-size: 52px;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-header-content p {
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* =========================================
+   FILTER KATEGORI (TOMBOL)
+   ========================================= */
+.kategori-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    justify-content: center; /* Agar tombol berada di tengah */
+}
+
+.btn-kategori {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px; /* Membuat sudut sangat rounded / pill shape */
+    border: 2px solid #0b1a3d; /* Border Navy */
+    background-color: #ffffff; /* Warna dasar Putih */
+    color: #0b1a3d; /* Teks Navy */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-kategori:hover {
+    background-color: #e8f0fe; /* Biru sangat muda saat di-hover */
+}
+
+/* State Aktif (Warna Navy, Teks Putih) */
+.btn-kategori.active {
+    background-color: #0b1a3d;
+    color: #ffffff;
+    border-color: #0b1a3d;
+}
+
+/* =========================================
+   MAIN CONTENT LAYOUT (KIRI & KANAN)
+   ========================================= */
+.container-berita {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Layout Utama: Kiri (Berita) & Kanan (Populer) */
+.berita-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* --- KOLOM KIRI (DAFTAR BERITA) --- */
+.berita-utama {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom Sejajar */
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Desain Kartu Berita Vertikal */
+.berita-card {
+    display: flex;
+    flex-direction: column; /* Ubah jadi vertikal (gambar di atas, teks di bawah) */
+    background-color: #ffffff;
+    border-radius: 20px; /* Sudut membulat seperti di gambar */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.berita-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.berita-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Tinggi gambar fix */
+}
+
+.berita-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Label / Badge Kategori */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px; /* Posisi badge di kiri atas */
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 20px; /* Sudut penuh */
+}
+
+.badge-merah { background-color: #ff3b30; }
+.badge-hijau { background-color: #34c759; }
+.badge-kuning { background-color: #ffcc00; color: #333; }
+
+/* Info Teks di Bawah Gambar */
+.berita-info {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.berita-tanggal {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.berita-judul {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: capitalize;
+}
+
+.berita-deskripsi {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+    flex: 1; /* Mendorong tombol selalu ke bawah */
+    line-height: 1.5;
+}
+
+/* Pembungkus Tombol (Agar Ketengah) */
+.btn-wrapper {
+    text-align: center; /* Menengahkan tombol */
+    margin-top: auto;
+}
+
+/* Tombol Lihat Selengkapnya */
+.btn-selengkapnya {
+    display: inline-block;
+    background-color: #3b8af2; /* Warna biru tombol sesuai gambar */
+    color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 20px; /* Sudut tombol membulat */
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-selengkapnya:hover {
+    background-color: #2a6cbd;
+}
+
+/* Penyesuaian Pagination agar tidak ikut ke grid */
+.pagination {
+    grid-column: 1 / -1; /* Pagination membentang di seluruh kolom */
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #0b1a3d;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.pagination a.active, .pagination a:hover {
+    background-color: #0b1a3d;
+    color: #ffffff;
+}
+
+/* --- KOLOM KANAN (BERITA POPULER) --- */
+.berita-populer {
+    flex: 0 0 350px; /* Lebar tetap */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 100px; /* Agar tetap terlihat saat scroll */
+}
+
+.populer-title {
+    font-size: 28px;
+    color: #00005e;
+    margin-bottom: 25px;
+    font-weight: 800;
+    border-bottom: 3px solid #00005e;
+    padding-bottom: 10px;
+}
+
+.populer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.populer-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.populer-num {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #1e0b5e; /* Ungu navy */
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 2;
+    border: 3px solid #ffffff;
+}
+
+.populer-img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.populer-text {
+    flex: 1;
+}
+
+.populer-text h3 {
+    font-size: 15px;
+    color: #000;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.populer-date {
+    font-size: 12px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+footer {
+    background-color: #0b1a3d;
+    color: #ffffff;
+    padding: 30px 50px 15px 50px;
+    margin-top: 80px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 55px;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.social-item i {
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.4;
+    margin: 20px auto 15px auto;
+    max-width: 1200px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #d1d5db;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 992px) {
+    .berita-layout {
+        flex-direction: column;
+    }
+    .berita-populer {
+        flex: 1;
+        width: 100%;
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero-header {
+        height: 300px;
+    }
+    .hero-header-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .hero-header-content h1 {
+        font-size: 32px;
+    }
+    .hero-header-content p {
+        font-size: 16px;
+    }
+    
+    /* Perubahan untuk Mobile di Grid Berita */
+    .berita-utama {
+        grid-template-columns: 1fr; /* 1 Kolom di HP */
+    }
+    .berita-img-wrapper {
+        height: 200px; 
+    }
+    
+    footer {
+        padding: 20px;
+    }
+    .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
