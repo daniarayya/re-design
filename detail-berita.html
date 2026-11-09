@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Detail Berita - Biro Otonomi Daerah dan Kerjasama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Memanggil CSS Eksternal -->
+    <link rel="stylesheet" href="detail-berita.css">    
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo Jawa Tengah" class="logo-img">
+                <div class="logo-text">
+                    Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
+                </div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                
+                <!-- Menu Layanan dengan Dropdown -->
+                <li class="dropdown">
+                    <a href="#" id="layananBtn">Layanan <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="https://sedunia.jatengprov.go.id/">SEDUNIA</a></li>
+                        <li><a href="https://sikejam.jatengprov.go.id/">SIKEJAM</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="dokumen.html">Dokumen</a></li>
+                <li><a href="berita.html" class="active">Berita</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Header (Seperti di halaman berita) -->
+    <section class="hero-header">
+        <div class="hero-header-overlay"></div>
+        <img src="img/header.png" alt="Header Banner" class="hero-header-img">
+        <div class="hero-header-content">
+            <h1>Berita</h1>
+            <p>Dapatkan berita terbaru seputar kegiatan, program dan perkembangan Biro Otonomi Daerah dan Kerjasama Pemerintahan Provinsi Jawa Tengah</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container-berita-detail">
+        
+        <!-- DIV PEMBUNGKUS KONTEN (Seperti card putih) -->
+        <div class="berita-card-wrapper">
+            
+            <!-- Judul Berita -->
+            <h1 class="judul-berita">Pemprov Jateng Tekankan Penguatan Tata Kelola Pemerintahan dan Pelayanan Publik di Cilacap</h1>
+            
+            <!-- Meta Berita (Kategori Kiri, Tanggal Kanan) -->
+            <div class="meta-berita">
+                <span class="badge-kategori">Otonomi Daerah</span>
+                <span class="tanggal"><i class="far fa-calendar-alt"></i> 18 Juni 2026</span>
+            </div>
+
+            <!-- Gambar Utama -->
+            <div class="gambar-utama-wrapper">
+                <img src="img/berita-cilacap.jpg" alt="Pemprov Jateng di Cilacap" class="gambar-utama">
+            </div>
+
+            <!-- Isi Berita -->
+            <article class="isi-berita">
+                <p><strong>Cilacap</strong> – Pemerintah Provinsi Jawa Tengah menggelar pertemuan asistensi dan koordinasi pemerintahan bersama Pemerintah Kabupaten Cilacap pada Minggu, 15 Maret 2026, pukul 13.00 WIB di Aula BPKAD Kabupaten Cilacap. Kegiatan berlangsung terbuka bagi wartawan dan media serta diakhiri dengan sesi doorstop.</p>
+                
+                <p>Hadir dalam kegiatan tersebut perwakilan Pemerintah Provinsi Jawa Tengah, yakni Asisten Pemerintahan dan Kesejahteraan Rakyat (Asemp Kesra) Provinsi Jawa Tengah, Kepala Biro Pemerintahan, Otonomi Daerah dan Kerja Sama (Karo Pemotdaks), Kepala Biro Hukum, Dispermades Dukcapil, BPBD Provinsi Jawa Tengah, dan Inspektorat Provinsi Jawa Tengah.</p>
+                
+                <p>Dari Pemerintah Kabupaten Cilacap hadir Plt Bupati Cilacap, unsur Forkopimda yang terdiri dari Kapolres, Dandim, Danlanal, Wakil Ketua DPRD Kabupaten Cilacap, para Kepala OPD, serta para camat se-Kabupaten Cilacap.</p>
+                
+                <p>Dalam arahannya, Asisten Pemerintahan dan Kesia Provinsi Jawa Tengah menekankan pentingnya menjaga kelancaran roda pemerintahan dan pelayanan publik di Kabupaten Cilacap. Ia meminta agar segera ditetapkan Pelaksana Harian (Plh) Sekretaris Daerah guna memastikan administrasi pemerintahan berjalan optimal.</p>
+                
+                <p>Selain itu, seluruh urusan pemerintahan yang berada di bawah koordinasi Asisten Pemerintahan, Asisten Perekonomian dan Pembangunan, serta Asisten Administrasi Umum diminta segera diidentifikasi agar pelayanan kepada masyarakat tidak mengalami hambatan.</p>
+                
+                <p>Aspem Kesra juga meminta dukungan penuh dari jajaran Forkopimda untuk bersama-sama menjaga stabilitas pemerintahan daerah dan memastikan pelayanan kepada masyarakat berjalan maksimal.</p>
+            </article>
+
+            <!-- Tombol Kembali -->
+            <div class="back-wrapper">
+                <a href="berita.html" class="btn-kembali"><i class="fas fa-chevron-left"></i> Kembali ke Berita</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-left">
+                <img src="img/logo.png" alt="Logo Jawa Tengah" class="footer-logo">
+                <div class="footer-title">
+                    BIRO PEMERINTAHAN,<br>
+                    OTONOMI DAERAH &<br>
+                    KERJA SAMA PROVINSI<br>
+                    JAWA TENGAH
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="social-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>biropemotdaks_jateng</span>
+                </div>
+                <div class="social-item">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Biropemotdaks_jateng</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Biro Pemerintahan, Otonomi Daerah & Kerja Sama Provinsi Jawa Tengah
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownContainer = document.querySelector('.dropdown');
+            const layananBtn = document.getElementById('layananBtn');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+
+            dropdownContainer.addEventListener('mouseenter', function() {
+                dropdownMenu.classList.add('show');
+            });
+
+            dropdownContainer.addEventListener('mouseleave', function() {
+                dropdownMenu.classList.remove('show');
+            });
+
+            layananBtn.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                dropdownMenu.classList.toggle('show');
+            });
+
+            window.addEventListener('click', function(event) {
+                if (!event.target.closest('.dropdown')) {
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

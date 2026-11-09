@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* =========================================
+   NAVBAR STYLES
+   ========================================= */
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000000;
+}
+
+.logo-text span {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0b1a3d;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    border-bottom: 3px solid #0b1a3d;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+/* =========================================
+   DROPDOWN STYLES (NAVY & PUTIH + ANIMASI)
+   ========================================= */
+.dropdown-menu {
+    display: block; /* Ubah dari 'none' ke 'block' agar bisa dianimasikan */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0b1a3d; /* Navy */
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 1001;
+    padding: 8px 0;
+    margin-top: 5px;
+    
+    /* Efek Animasi Awal (Tersembunyi) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* Sedikit turun ke bawah */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Class .show akan memunculkan dropdown dengan animasi */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Kembali ke posisi semula */
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ffffff !important; /* Putih */
+    border-bottom: none;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #1a2f5e; /* Navy lebih terang saat hover */
+    color: #ffffff !important;
+}
+
+.fa-chevron-down {
+    font-size: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Animasi panah berputar */
+}
+
+/* Panah berputar saat dropdown terbuka (opsional) */
+.dropdown:hover .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* =========================================
+   HERO HEADER (FOTO + TEKS + GRADASI PUTIH)
+   ========================================= */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Gradasi Putih di sebelah kiri */
+.hero-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+
+.hero-header-content {
+    position: relative;
+    z-index: 3;
+    padding-left: 80px;
+    max-width: 600px;
+}
+
+.hero-header-content h1 {
+    font-size: 52px;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-header-content p {
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* --- TENTANG BIRO (GAMBAR KIRI) --- */
+.tentang-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px; /* Rounded */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.tentang-img-container {
+    flex: 0 0 40%; /* Lebar gambar 40% */
+}
+
+.tentang-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+.tentang-text {
+    flex: 1;
+}
+
+.tentang-text h2 {
+    color: #00005e;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.tentang-text p {
+    text-align: justify;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Garis Horizontal Navy di bawah judul */
+.garis-navy {
+    width: 80px;              /* Panjang garis, sesuaikan */
+    height: 4px;              /* Ketebalan garis */
+    background-color: #0b1a3d; /* Warna Navy */
+    border-radius: 2px;       /* Ujung garis sedikit rounded */
+    margin: 10px 0 20px 0;    /* Jarak atas-bawah: atas 10px, bawah 20px */
+}
+
+/* --- VISI & MISI BERDAMPINGAN --- */
+.visi-misi-container {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 40px;
+    background-color: #e8f0fe; /* Biru Muda */
+    border-radius: 16px; /* Rounded */
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.visi-box, .misi-box {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.visi-box h2, .misi-box h2 {
+    color: #00005e;
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.visi-box p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.misi-box ol {
+    margin-left: 20px;
+    list-style-type: decimal;
+}
+
+.misi-box li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Sekat Garis Lurus Navy */
+.sekat-garis {
+    width: 3px;
+    background-color: #0b1a3d; /* Navy */
+    margin: 10px 20px;
+    border-radius: 2px;
+}
+
+/* --- TUGAS DAN FUNGSI --- */
+.tugas-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.tugas-section h2 {
+    color: #00005e;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.tugas-section p {
+    text-align: justify;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.tugas-section ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.tugas-section li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* =========================================
+   FOOTER STYLES (UKURAN NORMAL)
+   ========================================= */
+footer {
+    background-color: #0b1a3d; /* Warna Navy Gelap */
+    color: #ffffff;
+    padding: 30px 50px 15px 50px; /* Padding lebih kecil dan normal */
+    margin-top: 80px;
+}
+
+/* Container Utama (Kiri & Kanan) */
+.footer-main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px; /* Max width disesuaikan */
+    margin: 0 auto;
+}
+
+/* Bagian Kiri (Logo + Teks) */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak logo dan teks lebih rapat */
+}
+
+.footer-logo {
+    height: 55px; /* Ukuran logo dikembalikan ke normal */
+    width: auto;
+}
+
+.footer-title {
+    font-size: 14px; /* Ukuran font normal */
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+/* Bagian Kanan (Sosial Media) */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Jarak antar sosmed */
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px; /* Font sosmed normal */
+}
+
+.social-item i {
+    font-size: 20px; /* Ukuran ikon normal */
+    color: #ffffff;
+    width: 25px; /* Sejajar rapi */
+    text-align: center;
+}
+
+/* Garis Pembatas Putih */
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.4; /* Sedikit transparan agar elegan */
+    margin: 20px auto 15px auto;
+    max-width: 1200px;
+}
+
+/* Teks Copyright di Bawah */
+.footer-bottom {
+    text-align: center;
+    font-size: 13px; /* Font copyright kecil */
+    font-weight: 400;
+    color: #d1d5db; /* Putih agak keabu-abuan agar tidak terlalu kontras */
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    .hero-header-content {
+        padding-left: 40px;
+    }
+    .hero-header-content h1 {
+        font-size: 40px;
+    }
+    .hero-header-content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero-header {
+        height: 300px;
+    }
+    .hero-header-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .hero-header-content h1 {
+        font-size: 32px;
+    }
+    .hero-header-content p {
+        font-size: 16px;
+    }
+    .tentang-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .tentang-img-container {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .visi-misi-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .sekat-garis {
+        width: 100%;
+        height: 3px;
+        margin: 20px 0;
+    }
+    .social-icons {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .footer-title {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+    .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .footer-logo {
+        height: 45px;
+    }
+    .footer-title {
+        font-size: 13px;
+    }
+    .footer-right {
+        gap: 8px;
+    }
+    .social-item {
+        font-size: 13px;
+    }
+    .social-item i {
+        font-size: 18px;
+        width: 20px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
