@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="konten-masukan.css">
     <title>Kontak & Masukan - Biro Pemerintahan Otonomi Daerah dan Kerja Sama</title>
 </head>
-    <header>
+    <header> <!-- NAVIGATION BAR / NAVBAR-->
         <div class="navbar">
             <div class="navbar-logo">
                 <img src="img/logo.png" alt="Biro Pemerintahan Otonomi Daerah dan Kerja Sama" class="gambar-logo">
@@ -30,4 +30,49 @@
             </ul>
         </div>
     </header>
+
+    <section class="hero-header">
+        <img src="img/header.png" class="hero-header-gambar">
+        <div class="hero-header-konten">
+            <h1>Kontak & Masukan</h1>
+            <p>Informasi kontak, form masukan, permintaan dan usulan untuk Biro Otonomi Daerah dan Kerjasama.</p>
+        </div>
+    </section>
+
+    <main class="kontainer">
+        <div class="kontainer-kontak">
+            <div class="kontak-kotak">
+                <h2>Info Kontak Kami</h2>
+                <p>(logo) (024)-8311174</p>
+                <p>(logo) biropemotdakerjasama@gmail.com</p>
+                <p>(logo) Jl. Pahlawan No.9 Mugassari, Kec. Semarang Selatan, Kota Semarang, Jawa Tengah.</p>
+                <p>(logo) Senin - Jumat pukul 08.00 - 16.00 WIB</p>
+            </div>
+        </div>
+
+
+        <div class="kontainer-form">
+            <h2>Kontak Form Pintar</h2>
+            
+            <form action="#" method="POST">
+                <div class="form-kotak">
+                    <label for="name">Nama:<span class="required">*</span></label>
+                    <input type="text" id="name" placeholder="Masukkan nama anda.." required>
+                </div>
+
+                <div class="form-kotak">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Masukkan untuk menerima respon.">
+                </div>
+
+                <div class="form-kotak">
+                    <label for="pesan">Masukkan pesan anda:<span class="required">*</span></label>
+                    <textarea id="pesan" name="pesan" rows="5" placeholder="Masukan pesan yang ingin anda sampaikan." required></textarea>
+                </div>
+
+                <p class="form-catatan">(Field dengan tanda bindang '<span class="required">*</span>' bersifat wajib)</p>
+                <button type="submit" class="form-tombol">Kirim</button>
+            </form>
+        </div>
+    </main>
 </html>
