@@ -1,4 +1,4 @@
-*{
+*{ /* Global Styling */
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
@@ -6,4 +6,60 @@
 body{
     background-color: #ebe6e6;
     line-height: 1.5;
+}
+
+a{
+    color: inherit;
+}
+
+header{ /* Navbar */
+    background-color: #ffffff;
+}
+
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.navbar-logo{
+    align-items: center;
+    max-width: 380px;
+}
+
+.gambar-logo{
+    height: 55px;
+    width: auto;
+}
+
+.logo-text{
+    font-size: 14px;
+}
+
+.logo-text-kecil{
+    font-size: 12px;
+}
+
+.navbar-links{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links li{
+    position: relative;
+}
+
+.navbar-links a{
+    font-size: 14px;
+    padding: 8px 0px;
+}
+
+.navbar-links a.terpilih{
+    border-bottom: 3px solid #191B3C;
+}
+
+.navbar-links a:hover{
+    color: #0056b3;
 }
