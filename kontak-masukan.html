@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Kontak & Masukan - Biro Otonomi Daerah dan Kerja Sama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="konten-masukan.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- External font untuk icon-->
-    <title>Kontak & Masukan - Biro Pemerintahan Otonomi Daerah dan Kerja Sama</title>
 </head>
 <body>
-    <header> <!-- NAVIGATION BAR / NAVBAR-->
-        <div class="navbar"> <!-- Logo Biro -->
-            <div class="navbar-logo">
-                <img src="img/logo.png" alt=" Logo Biro Pemerintahan Otonomi Daerah dan Kerja Sama" class="gambar-logo">
-                <div class="logo-text">Biro Pemerintahan Otonomi Daerah dan Kerja Sama</div>
-                <div class="logo-text-kecil">Pemerintah Provinsi Jawa Tengah</div>
+    <header> <!-- Header and Navbar -->
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo Jawa Tengah" class="logo-img">
+                <div class="logo-text">
+                    Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
+                </div>
             </div>
-
-            <ul class="navbar-links"> <!-- Navigation Link -->
+            
+            <ul class="nav-links">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
-                <li class="navbar-dropdown dropdown">
+                <li class="dropdown">
                     <a href="#" id="layananBtn">Layanan <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu" id="dropdownMenu">
                         <li><a href="https://sedunia.jatengprov.go.id/">SEDUNIA</a></li>
                         <li><a href="https://sikejam.jatengprov.go.id/">SIKEJAM</a></li>
                     </ul>
                 </li>
-                <li><a href="dokumen-regulasi.html">Dokumen</a></li>
+                <li><a href="dokumen.html">Dokumen</a></li>
                 <li><a href="berita.html">Berita</a></li>
-                <li><a href="#" class="active">Kontak</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
             </ul>
         </div>
     </header>
-
+    
     <section class="hero-header"> <!-- Hero Banner -->
-        <img src="img/header.png" class="hero-header-gambar">
-        <div class="hero-header-konten">
+        <div class="hero-header-overlay"></div>
+        <img src="img/header.png" alt="Header Banner" class="hero-header-img">
+        <div class="hero-header-content">
             <h1>Kontak & Masukan</h1>
             <p>Informasi kontak, form masukan, permintaan dan usulan untuk Biro Otonomi Daerah dan Kerjasama.</p>
         </div>
     </section>
 
-    <main class="kontainer"> <!-- Informasi Kontak -->
+    <main class="kontainer"> <!-- MAIN CONTENT -->
         <div class="kontainer-kontak">
             <div class="kontak-kotak">
                 <h2>Info Kontak Kami</h2>
@@ -52,10 +55,8 @@
             </div>
         </div>
 
-
-        <div class="kontainer-form"> <!-- Form Saran -->
+        <div class="kontainer-form">
             <h2>Kontak Form Pintar</h2>
-            
             <form action="#" method="POST">
                 <div class="form-kotak">
                     <label for="name">Nama:<span class="required">*</span></label>
@@ -72,20 +73,25 @@
                     <textarea id="pesan" name="pesan" rows="5" placeholder="Masukan pesan yang ingin anda sampaikan." required></textarea>
                 </div>
 
-                <p class="form-catatan">(Field dengan tanda bindang '<span class="required">*</span>' bersifat wajib)</p>
+                <p class="form-catatan">(Field dengan tanda bintang '<span class="required">*</span>' bersifat wajib)</p>
                 <button type="submit" class="form-tombol">Kirim</button>
             </form>
         </div>
     </main>
 
     <footer> <!-- Footer -->
-        <div class="footer">
-            <div class="footer-kiri">
-                <img src="img/logo.png" alt="Logo Biro Pemerintahan Otonomi Daerah dan Kerja Sama" class="footer-logo">
-                <div class="footer-text">BIRO PEMERINTAHAN, OTONOMI DAERAH & KERJA SAMA PROVINSI JAWA TENGAH</div>
+        <div class="footer-main">
+            <div class="footer-left">
+                <img src="img/logo.png" alt="Logo Jawa Tengah" class="footer-logo">
+                <div class="footer-title">
+                    BIRO PEMERINTAHAN,<br>
+                    OTONOMI DAERAH &<br>
+                    KERJA SAMA PROVINSI<br>
+                    JAWA TENGAH
+                </div>
             </div>
 
-            <div class="footer-kanan">
+            <div class="footer-right">
                 <div class="social-item">
                     <i class="fab fa-instagram"></i>
                     <span>biropemotdaks_jateng</span>
@@ -96,34 +102,23 @@
                 </div>
             </div>
         </div>
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Biro Pemerintahan, Otonomi Daerah & Kerja Sama Provinsi Jawa Tengah
+        </div>
     </footer>
 
-    <script>
+    <script> <!-- Script Dropdown -->
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownContainer = document.querySelector('.dropdown');
             const layananBtn = document.getElementById('layananBtn');
             const dropdownMenu = document.getElementById('dropdownMenu');
 
-            dropdownContainer.addEventListener('mouseenter', function() {
-                dropdownMenu.classList.add('show');
-            });
-
-            dropdownContainer.addEventListener('mouseleave', function() {
-                dropdownMenu.classList.remove('show');
-            });
-
-            layananBtn.addEventListener('click', function(event) {
-                event.preventDefault(); 
-                dropdownMenu.classList.toggle('show');
-            });
-
-            window.addEventListener('click', function(event) {
-                if (!event.target.closest('.dropdown')) {
-                    if (dropdownMenu.classList.contains('show')) {
-                        dropdownMenu.classList.remove('show');
-                    }
-                }
-            });
+            dropdownContainer.addEventListener('mouseenter', () => dropdownMenu.classList.add('show'));
+            dropdownContainer.addEventListener('mouseleave', () => dropdownMenu.classList.remove('show'));
+            layananBtn.addEventListener('click', (e) => { e.preventDefault(); dropdownMenu.classList.toggle('show'); });
+            window.addEventListener('click', (e) => { if (!e.target.closest('.dropdown')) dropdownMenu.classList.remove('show'); });
         });
     </script>
 </body>
