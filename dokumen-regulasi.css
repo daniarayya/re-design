@@ -278,6 +278,90 @@ header { /*NAVBAR STYLE (Universal)*/
     box-shadow: 0 2px 8px rgba(52, 199, 89, 0.15);
 }
 
+/* =========================================
+   FILTER SIDEBAR (Gaya Default & Aktif)
+   ========================================= */
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 1. Gaya Default (Latar Putih, Border & Warna Khas) */
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 18px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+/* Warna khusus ikon dan border per tombol (Default) */
+.filter-btn.btn-waktu {
+    border: 2px solid #3b8af2;
+    color: #3b8af2;
+}
+.filter-btn.btn-waktu i { color: #3b8af2; }
+
+.filter-btn.btn-lhkan {
+    border: 2px solid #34c759;
+    color: #34c759;
+}
+.filter-btn.btn-lhkan i { color: #34c759; }
+
+.filter-btn.btn-reformasi {
+    border: 2px solid #ff3b30;
+    color: #ff3b30;
+}
+.filter-btn.btn-reformasi i { color: #ff3b30; }
+
+.filter-btn.btn-laporan {
+    border: 2px solid #0b1a3d;
+    color: #0b1a3d;
+}
+.filter-btn.btn-laporan i { color: #0b1a3d; }
+
+
+/* 2. Gaya Saat Dipilih / Aktif (Full Warna, Teks & Ikon Putih) */
+.filter-btn.active.btn-waktu {
+    background-color: #3b8af2;
+    color: #ffffff;
+    border-color: #3b8af2;
+}
+.filter-btn.active.btn-waktu i { color: #ffffff; }
+
+.filter-btn.active.btn-lhkan {
+    background-color: #34c759;
+    color: #ffffff;
+    border-color: #34c759;
+}
+.filter-btn.active.btn-lhkan i { color: #ffffff; }
+
+.filter-btn.active.btn-reformasi {
+    background-color: #ff3b30;
+    color: #ffffff;
+    border-color: #ff3b30;
+}
+.filter-btn.active.btn-reformasi i { color: #ffffff; }
+
+.filter-btn.active.btn-laporan {
+    background-color: #0b1a3d;
+    color: #ffffff;
+    border-color: #0b1a3d;
+}
+.filter-btn.active.btn-laporan i { color: #ffffff; }
+
+/* Efek Hover opsional saat belum aktif */
+.filter-btn:hover:not(.active) {
+    opacity: 0.85;
+}
 
 /* --- KOLOM KANAN: DAFTAR DOKUMEN --- */
 .dokumen-main-content {
@@ -289,7 +373,8 @@ header { /*NAVBAR STYLE (Universal)*/
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    border: 2px solid #3b8af2; /* Bingkai biru terang sesuai gambar referensi */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 1px solid #e0e0e0;
 }
 
 .dokumen-box h2 {

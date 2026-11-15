@@ -56,23 +56,22 @@
             <aside class="filter-sidebar"> <!-- Filter -->
                 <h2>Filter berdasarkan ...</h2>
                 <div class="filter-buttons">
-                    <button class="filter-btn active">
+                    <button class="filter-btn btn-waktu active" onclick="pilihFilter(this)">
                         <i class="far fa-clock"></i> Waktu Perilisan
                     </button>
-                    <button class="filter-btn">
+                    <button class="filter-btn btn-lhkan" onclick="pilihFilter(this)">
                         <i class="fas fa-money-bill-wave"></i> Dokumen LHKAN
                     </button>
-                    <button class="filter-btn">
-                        <i class="fas fa-file-invoice"></i> Reformasi Birokrasi
+                    <button class="filter-btn btn-reformasi" onclick="pilihFilter(this)">
+                        <i class="fas fa-file-invoice"></i> Reformasi Berokrasi
                     </button>
-                    <button class="filter-btn">
+                    <button class="filter-btn btn-laporan" onclick="pilihFilter(this)">
                         <i class="fas fa-clipboard-list"></i> Laporan LKPJ
                     </button>
                 </div>
             </aside>
-
-            <!-- Document ist -->
-            <section class="dokumen-main-content">
+            
+            <section class="dokumen-main-content"> <!-- Document ist -->
                 <div class="dokumen-box">
                     <h2>Dokumen Publik</h2>
                     
@@ -219,6 +218,13 @@
             layananBtn.addEventListener('click', (e) => { e.preventDefault(); dropdownMenu.classList.toggle('show'); });
             window.addEventListener('click', (e) => { if (!e.target.closest('.dropdown')) dropdownMenu.classList.remove('show'); });
         });
+
+        function pilihFilter(button) {
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    }
     </script>
 </body>
 </html>
