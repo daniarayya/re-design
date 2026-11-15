@@ -265,13 +265,6 @@ header { /*NAVBAR STYLE (Universal)*/
     color: #0b1a3d;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
-    border-color: #34c759;
-    color: #000;
-    box-shadow: 0 2px 8px rgba(52, 199, 89, 0.15);
-}
-
 .filter-buttons { /* FILTER SIDEBAR (yang nyala dan enggak) */
     display: flex;
     flex-direction: column;
@@ -460,32 +453,6 @@ header { /*NAVBAR STYLE (Universal)*/
     background-color: #0b1a3d;
     color: #ffffff;
     border-color: #0b1a3d;
-}
-
-/* =========================================
-   RESPONSIVE (MOBILE)
-   ========================================= */
-@media (max-width: 1240px) {
-    .dokumen-layout {
-        flex-direction: column;
-    }
-    .filter-sidebar {
-        flex: 1;
-        width: 100%;
-    }
-    .dokumen-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-        border-radius: 16px;
-        padding: 20px;
-    }
-    .dokumen-actions {
-        width: 100%;
-        justify-content: flex-end;
-        border-top: 1px solid #f1f5f9;
-        padding-top: 10px;
-    }
 }
 
 footer { /*FOOTER STYLES (Universal)*/
