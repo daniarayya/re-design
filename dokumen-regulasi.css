@@ -176,6 +176,253 @@ header { /*NAVBAR STYLE (Universal)*/
     line-height: 1.5;
 }
 
+/* =========================================
+   MAIN CONTENT: DOKUMEN & REGULASI
+   ========================================= */
+.container-dokumen {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Search Bar di atas */
+.search-bar-wrapper {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background: #ffffff;
+    border: 2px solid #0b1a3d;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.search-bar-wrapper input {
+    flex: 1;
+    padding: 12px 25px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-bar-wrapper button {
+    background-color: #0b1a3d;
+    color: #ffffff;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.search-bar-wrapper button:hover {
+    background-color: #1a2f5e;
+}
+
+/* Layout Dua Kolom (Kiri: Filter, Kanan: Daftar Dokumen) */
+.dokumen-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* --- KOLOM KIRI: FILTER --- */
+.filter-sidebar {
+    flex: 0 0 280px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 1px solid #e0e0e0;
+}
+
+.filter-sidebar h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 18px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.filter-btn i {
+    font-size: 16px;
+    color: #0b1a3d;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: #34c759; /* Warna hijau penanda aktif seperti di referensi */
+    color: #000;
+    box-shadow: 0 2px 8px rgba(52, 199, 89, 0.15);
+}
+
+
+/* --- KOLOM KANAN: DAFTAR DOKUMEN --- */
+.dokumen-main-content {
+    flex: 1;
+}
+
+.dokumen-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 2px solid #3b8af2; /* Bingkai biru terang sesuai gambar referensi */
+}
+
+.dokumen-box h2 {
+    font-size: 18px;
+    color: #0b1a3d;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 12px;
+}
+
+.dokumen-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dokumen-item { /* Item Dokumen Satuan */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px; /* Bentuk kapsul melingkar */
+    background-color: #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dokumen-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.dokumen-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pdf-icon {
+    font-size: 32px;
+    color: #ef4444; /* Warna merah khas ikon PDF */
+}
+
+.dokumen-info h3 {
+    font-size: 15px;
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dokumen-info span {
+    font-size: 12px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Tombol Aksi (Lihat & Download) */
+.dokumen-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.dokumen-actions a {
+    color: #64748b;
+    font-size: 16px;
+    transition: color 0.2s;
+    padding: 5px;
+}
+
+.dokumen-actions a:hover {
+    color: #0b1a3d;
+}
+
+/* Pagination / Nomor Halaman */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    color: #0b1a3d;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: #0b1a3d;
+    color: #ffffff;
+    border-color: #0b1a3d;
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+    .dokumen-layout {
+        flex-direction: column;
+    }
+    .filter-sidebar {
+        flex: 1;
+        width: 100%;
+    }
+    .dokumen-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        border-radius: 16px;
+        padding: 20px;
+    }
+    .dokumen-actions {
+        width: 100%;
+        justify-content: flex-end;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 10px;
+    }
+}
+
 footer { /*FOOTER STYLES (Universal)*/
     background-color: #0b1a3d;
     color: #ffffff;
