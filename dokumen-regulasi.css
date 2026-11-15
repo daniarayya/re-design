@@ -130,7 +130,7 @@ header { /*NAVBAR STYLE (Universal)*/
 .hero-header { /*HERO BANNER (Universal)*/
     position: relative;
     width: 100%;
-    height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+    height: 400px; /* Tinggi / Ketinggian / Height */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -176,17 +176,13 @@ header { /*NAVBAR STYLE (Universal)*/
     line-height: 1.5;
 }
 
-/* =========================================
-   MAIN CONTENT: DOKUMEN & REGULASI
-   ========================================= */
-.container-dokumen {
+.container-dokumen { /* MAIN CONTENT: DOKUMEN & REGULASI */
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Search Bar di atas */
-.search-bar-wrapper {
+.search-bar-wrapper { /* Search Bar */
     display: flex;
     max-width: 900px;
     margin: 0 auto 40px auto;
@@ -219,15 +215,13 @@ header { /*NAVBAR STYLE (Universal)*/
     background-color: #1a2f5e;
 }
 
-/* Layout Dua Kolom (Kiri: Filter, Kanan: Daftar Dokumen) */
-.dokumen-layout {
+.dokumen-layout { /* Layout */
     display: flex;
     gap: 30px;
     align-items: flex-start;
 }
 
-/* --- KOLOM KIRI: FILTER --- */
-.filter-sidebar {
+.filter-sidebar { /* --- FILTER --- */
     flex: 0 0 280px;
     background-color: #ffffff;
     padding: 25px;
@@ -273,22 +267,18 @@ header { /*NAVBAR STYLE (Universal)*/
 
 .filter-btn:hover,
 .filter-btn.active {
-    border-color: #34c759; /* Warna hijau penanda aktif seperti di referensi */
+    border-color: #34c759;
     color: #000;
     box-shadow: 0 2px 8px rgba(52, 199, 89, 0.15);
 }
 
-/* =========================================
-   FILTER SIDEBAR (Gaya Default & Aktif)
-   ========================================= */
-.filter-buttons {
+.filter-buttons { /* FILTER SIDEBAR (yang nyala dan enggak) */
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* 1. Gaya Default (Latar Putih, Border & Warna Khas) */
-.filter-btn {
+.filter-btn { /* Default */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -302,9 +292,7 @@ header { /*NAVBAR STYLE (Universal)*/
     transition: all 0.3s ease;
     text-align: left;
 }
-
-/* Warna khusus ikon dan border per tombol (Default) */
-.filter-btn.btn-waktu {
+.filter-btn.btn-waktu { /* Normal */
     border: 2px solid #3b8af2;
     color: #3b8af2;
 }
@@ -329,8 +317,7 @@ header { /*NAVBAR STYLE (Universal)*/
 .filter-btn.btn-laporan i { color: #0b1a3d; }
 
 
-/* 2. Gaya Saat Dipilih / Aktif (Full Warna, Teks & Ikon Putih) */
-.filter-btn.active.btn-waktu {
+.filter-btn.active.btn-waktu { /* Active */
     background-color: #3b8af2;
     color: #ffffff;
     border-color: #3b8af2;
@@ -358,13 +345,8 @@ header { /*NAVBAR STYLE (Universal)*/
 }
 .filter-btn.active.btn-laporan i { color: #ffffff; }
 
-/* Efek Hover opsional saat belum aktif */
-.filter-btn:hover:not(.active) {
-    opacity: 0.85;
-}
 
-/* --- KOLOM KANAN: DAFTAR DOKUMEN --- */
-.dokumen-main-content {
+.dokumen-main-content { /* ---  Document List --- */
     flex: 1;
 }
 
@@ -398,7 +380,7 @@ header { /*NAVBAR STYLE (Universal)*/
     align-items: center;
     padding: 15px 20px;
     border: 1px solid #e2e8f0;
-    border-radius: 30px; /* Bentuk kapsul melingkar */
+    border-radius: 30px; /* Border Lengkung atau apa itu namanya */
     background-color: #ffffff;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -416,7 +398,7 @@ header { /*NAVBAR STYLE (Universal)*/
 
 .pdf-icon {
     font-size: 32px;
-    color: #ef4444; /* Warna merah khas ikon PDF */
+    color: #ef4444;
 }
 
 .dokumen-info h3 {
@@ -434,8 +416,7 @@ header { /*NAVBAR STYLE (Universal)*/
     gap: 6px;
 }
 
-/* Tombol Aksi (Lihat & Download) */
-.dokumen-actions {
+.dokumen-actions { /* Action Buttons */
     display: flex;
     gap: 15px;
 }
@@ -451,8 +432,7 @@ header { /*NAVBAR STYLE (Universal)*/
     color: #0b1a3d;
 }
 
-/* Pagination / Nomor Halaman */
-.pagination {
+.pagination { /* Pagination / Nomor Halaman */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -485,7 +465,7 @@ header { /*NAVBAR STYLE (Universal)*/
 /* =========================================
    RESPONSIVE (MOBILE)
    ========================================= */
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
     .dokumen-layout {
         flex-direction: column;
     }
