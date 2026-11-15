@@ -343,6 +343,14 @@ header { /*NAVBAR STYLE (Universal)*/
     width: 100%;
 }
 
+.garis-navy {
+    width: 80px;              /* Panjang garis, sesuaikan */
+    height: 4px;              /* Ketebalan garis */
+    background-color: #0b1a3d; /* Warna Navy */
+    border-radius: 2px;       /* Ujung garis sedikit rounded */
+    margin: 10px 0 20px 0;    /* Jarak atas-bawah: atas 10px, bawah 20px */
+}
+
 .dokumen-box {
     background-color: #ffffff;
     padding: 30px;
@@ -355,10 +363,8 @@ header { /*NAVBAR STYLE (Universal)*/
 .dokumen-box h2 {
     font-size: 18px;
     color: #0b1a3d;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-weight: 700;
-    border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 12px;
 }
 
 .dokumen-list {
