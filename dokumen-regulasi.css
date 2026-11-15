@@ -177,7 +177,6 @@ header { /*NAVBAR STYLE (Universal)*/
 }
 
 .container-dokumen { /* MAIN CONTENT: DOKUMEN & REGULASI */
-    max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -341,6 +340,7 @@ header { /*NAVBAR STYLE (Universal)*/
 
 .dokumen-main-content { /* ---  Document List --- */
     flex: 1;
+    width: 100%;
 }
 
 .dokumen-box {
@@ -566,5 +566,22 @@ footer { /*FOOTER STYLES (Universal)*/
     }
     .footer-title {
         font-size: 13px;
+    }
+    .dokumen-layout {
+        flex-direction: column; /* Mengubah susunan jadi atas-bawah (filter di atas, list dokumen di bawah) */
+    }
+    
+    .filter-sidebar {
+        flex: unset;
+        width: 100%; /* Membuat kotak filter melebar penuh ke samping */
+    }
+
+    .filter-buttons {
+        flex-direction: row; /* Mengubah tombol filter di dalam sidebar menjadi horizontal/menyamping */
+        flex-wrap: wrap;     /* Agar tombol otomatis turun ke baris baru jika layar HP terlalu kecil */
+    }
+
+    .filter-btn {
+        flex: 1 1 200px;     /* Membagi rata ukuran tombol secara horizontal */
     }
 }
