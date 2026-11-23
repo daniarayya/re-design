@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="kontak-masukan.css">
 </head>
 <body>
-    <header> <!-- Header and Navbar -->
+    <header>
         <div class="navbar">
             <div class="logo-container">
                 <img src="img/logo.png" alt="Logo Jawa Tengah" class="logo-img">
@@ -17,12 +17,16 @@
                     Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
                 </div>
             </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+                <i class="fas fa-bars"></i>
+            </button>
             
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
                 <li class="dropdown">
-                    <a href="#" id="layananBtn">Layanan <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" id="layananBtn" aria-expanded="false" aria-controls="dropdownMenu">Layanan <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu" id="dropdownMenu">
                         <li><a href="https://sedunia.jatengprov.go.id/">SEDUNIA</a></li>
                         <li><a href="https://sikejam.jatengprov.go.id/">SIKEJAM</a></li>
@@ -35,7 +39,7 @@
         </div>
     </header>
     
-    <section class="hero-header"> <!-- Hero Banner -->
+    <section class="hero-header">
         <div class="hero-header-overlay"></div>
         <img src="img/header.png" alt="Header Banner" class="hero-header-img">
         <div class="hero-header-content">
@@ -44,7 +48,7 @@
         </div>
     </section>
 
-    <main class="kontainer"> <!-- MAIN CONTENT -->
+    <main class="kontainer">
         <div class="kontainer-kontak">
             <div class="kontak-kotak">
                 <h2>Info Kontak Kami</h2>
@@ -79,7 +83,7 @@
         </div>
     </main>
 
-    <footer> <!-- Footer -->
+    <footer>
         <div class="footer-main">
             <div class="footer-left">
                 <img src="img/logo.png" alt="Logo Jawa Tengah" class="footer-logo">
@@ -109,16 +113,44 @@
         </div>
     </footer>
 
-    <script> <!-- Script Dropdown -->
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
             const dropdownContainer = document.querySelector('.dropdown');
             const layananBtn = document.getElementById('layananBtn');
             const dropdownMenu = document.getElementById('dropdownMenu');
+            const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
-            dropdownContainer.addEventListener('mouseenter', () => dropdownMenu.classList.add('show'));
-            dropdownContainer.addEventListener('mouseleave', () => dropdownMenu.classList.remove('show'));
-            layananBtn.addEventListener('click', (e) => { e.preventDefault(); dropdownMenu.classList.toggle('show'); });
-            window.addEventListener('click', (e) => { if (!e.target.closest('.dropdown')) dropdownMenu.classList.remove('show'); });
+            function setDropdown(open) {
+                dropdownMenu.classList.toggle('show', open);
+                layananBtn.setAttribute('aria-expanded', String(open));
+            }
+
+            function setMenu(open) {
+                navLinks.classList.toggle('show', open);
+                navToggle.setAttribute('aria-expanded', String(open));
+                navToggle.innerHTML = open ? '<i class="fas fa-xmark"></i>' : '<i class="fas fa-bars"></i>';
+                if (!open) setDropdown(false);
+            }
+
+            navToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('show')));
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 992 && link !== layananBtn) setMenu(false);
+                });
+            });
+
+            dropdownContainer.addEventListener('mouseenter', () => { if (canHover.matches && window.innerWidth > 992) setDropdown(true); });
+            dropdownContainer.addEventListener('mouseleave', () => { if (canHover.matches && window.innerWidth > 992) setDropdown(false); });
+            layananBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                setDropdown(!dropdownMenu.classList.contains('show'));
+            });
+            window.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown') && dropdownMenu.classList.contains('show')) setDropdown(false);
+            });
         });
     </script>
 </body>
