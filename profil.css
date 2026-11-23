@@ -20,9 +20,6 @@ ul, ol {
     list-style: none;
 }
 
-/* =========================================
-   NAVBAR STYLES
-   ========================================= */
 header {
     background-color: #ffffff;
     position: sticky;
@@ -37,6 +34,7 @@ header {
     padding: 15px 60px;
     max-width: 1400px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -60,6 +58,19 @@ header {
 .logo-text span {
     font-weight: 400;
     font-size: 14px;
+}
+
+/* ===== Tombol Hamburger (default: tersembunyi di desktop) ===== */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #0b1a3d;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+    margin-left: auto;
 }
 
 .nav-links {
@@ -89,34 +100,28 @@ header {
     color: #000000;
 }
 
-/* =========================================
-   DROPDOWN STYLES (NAVY & PUTIH + ANIMASI)
-   ========================================= */
 .dropdown-menu {
-    display: block; /* Ubah dari 'none' ke 'block' agar bisa dianimasikan */
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #0b1a3d; /* Navy */
+    background-color: #0b1a3d;
     min-width: 160px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     border-radius: 4px;
     z-index: 1001;
     padding: 8px 0;
     margin-top: 5px;
-    
-    /* Efek Animasi Awal (Tersembunyi) */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px); /* Sedikit turun ke bawah */
+    transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
-/* Class .show akan memunculkan dropdown dengan animasi */
 .dropdown-menu.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0); /* Kembali ke posisi semula */
+    transform: translateY(0);
 }
 
 .dropdown-menu li {
@@ -127,13 +132,13 @@ header {
     display: block;
     padding: 10px 20px;
     font-size: 15px;
-    color: #ffffff !important; /* Putih */
+    color: #ffffff !important;
     border-bottom: none;
     transition: background-color 0.2s ease;
 }
 
 .dropdown-menu a:hover {
-    background-color: #1a2f5e; /* Navy lebih terang saat hover */
+    background-color: #1a2f5e;
     color: #ffffff !important;
 }
 
@@ -141,21 +146,17 @@ header {
     font-size: 12px;
     margin-left: 5px;
     vertical-align: middle;
-    transition: transform 0.3s ease; /* Animasi panah berputar */
+    transition: transform 0.3s ease;
 }
 
-/* Panah berputar saat dropdown terbuka (opsional) */
 .dropdown:hover .fa-chevron-down {
     transform: rotate(180deg);
 }
 
-/* =========================================
-   HERO HEADER (FOTO + TEKS + GRADASI PUTIH)
-   ========================================= */
 .hero-header {
     position: relative;
     width: 100%;
-    height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+    height: 400px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -171,7 +172,6 @@ header {
     z-index: 1;
 }
 
-/* Gradasi Putih di sebelah kiri */
 .hero-header-overlay {
     position: absolute;
     top: 0;
@@ -202,9 +202,6 @@ header {
     line-height: 1.5;
 }
 
-/* =========================================
-   MAIN CONTENT
-   ========================================= */
 .container {
     max-width: 1100px;
     margin: 50px auto;
@@ -218,13 +215,13 @@ header {
     align-items: center;
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 16px; /* Rounded */
+    border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     margin-bottom: 40px;
 }
 
 .tentang-img-container {
-    flex: 0 0 40%; /* Lebar gambar 40% */
+    flex: 0 0 40%;
 }
 
 .tentang-img {
@@ -252,13 +249,12 @@ header {
     color: #444;
 }
 
-/* Garis Horizontal Navy di bawah judul */
 .garis-navy {
-    width: 80px;              /* Panjang garis, sesuaikan */
-    height: 4px;              /* Ketebalan garis */
-    background-color: #0b1a3d; /* Warna Navy */
-    border-radius: 2px;       /* Ujung garis sedikit rounded */
-    margin: 10px 0 20px 0;    /* Jarak atas-bawah: atas 10px, bawah 20px */
+    width: 80px;
+    height: 4px;
+    background-color: #0b1a3d;
+    border-radius: 2px;
+    margin: 10px 0 20px 0;
 }
 
 /* --- VISI & MISI BERDAMPINGAN --- */
@@ -267,8 +263,8 @@ header {
     align-items: stretch;
     gap: 0;
     margin-bottom: 40px;
-    background-color: #e8f0fe; /* Biru Muda */
-    border-radius: 16px; /* Rounded */
+    background-color: #e8f0fe;
+    border-radius: 16px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
@@ -303,10 +299,9 @@ header {
     margin-bottom: 10px;
 }
 
-/* Sekat Garis Lurus Navy */
 .sekat-garis {
     width: 3px;
-    background-color: #0b1a3d; /* Navy */
+    background-color: #0b1a3d;
     margin: 10px 20px;
     border-radius: 2px;
 }
@@ -344,84 +339,85 @@ header {
     color: #444;
 }
 
-/* =========================================
-   FOOTER STYLES (UKURAN NORMAL)
-   ========================================= */
+/* ================= FOOTER ================= */
 footer {
-    background-color: #0b1a3d; /* Warna Navy Gelap */
+    background-color: #0b1a3d;
     color: #ffffff;
-    padding: 30px 50px 15px 50px; /* Padding lebih kecil dan normal */
+    padding: 30px 50px 15px 50px;
     margin-top: 80px;
 }
 
-/* Container Utama (Kiri & Kanan) */
 .footer-main {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Max width disesuaikan */
+    max-width: 1200px;
     margin: 0 auto;
+    gap: 20px;
+    flex-wrap: nowrap;
 }
 
-/* Bagian Kiri (Logo + Teks) */
 .footer-left {
     display: flex;
     align-items: center;
-    gap: 15px; /* Jarak logo dan teks lebih rapat */
+    gap: 15px;
+    min-width: 0;
 }
 
 .footer-logo {
-    height: 55px; /* Ukuran logo dikembalikan ke normal */
+    height: 55px;
     width: auto;
+    flex-shrink: 0;
 }
 
 .footer-title {
-    font-size: 14px; /* Ukuran font normal */
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.4;
     letter-spacing: 0.5px;
     text-align: left;
 }
 
-/* Bagian Kanan (Sosial Media) */
 .footer-right {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Jarak antar sosmed */
+    gap: 10px;
+    flex-shrink: 0;
 }
 
 .social-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 14px; /* Font sosmed normal */
+    font-size: 14px;
 }
 
 .social-item i {
-    font-size: 20px; /* Ukuran ikon normal */
+    font-size: 20px;
     color: #ffffff;
-    width: 25px; /* Sejajar rapi */
+    width: 25px;
     text-align: center;
 }
 
-/* Garis Pembatas Putih */
 .footer-divider {
     width: 100%;
     height: 1px;
     background-color: #ffffff;
-    opacity: 0.4; /* Sedikit transparan agar elegan */
+    opacity: 0.4;
     margin: 20px auto 15px auto;
     max-width: 1200px;
 }
 
-/* Teks Copyright di Bawah */
 .footer-bottom {
     text-align: center;
-    font-size: 13px; /* Font copyright kecil */
+    font-size: 13px;
     font-weight: 400;
-    color: #d1d5db; /* Putih agak keabu-abuan agar tidak terlalu kontras */
+    color: #d1d5db;
 }
 
+/* =========================================
+   TABLET (≤992px)
+   ========================================= */
 @media (max-width: 992px) {
     .navbar {
         padding: 15px 30px;
@@ -435,19 +431,88 @@ footer {
     .hero-header-content p {
         font-size: 18px;
     }
+    /* Footer tetap sejajar kiri-kanan, tidak diubah */
 }
 
+/* =========================================
+   HP / TABLET KECIL (≤768px)
+   ========================================= */
 @media (max-width: 768px) {
+    /* --- NAVBAR TOGGLE --- */
     .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-    .nav-links {
+        padding: 15px 20px;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        position: relative;
     }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 15px;
+        background-color: #ffffff;
+        border-top: 1px solid #e5e7eb;
+        padding: 10px 0;
+        align-items: stretch;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .nav-links a.active {
+        border-bottom: none;
+        background-color: #e8f0fe;
+        border-left: 4px solid #0b1a3d;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background-color: #f3f4f6;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        min-width: 100%;
+        border-radius: 0;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        color: #0b1a3d !important;
+        padding: 10px 40px;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #e5e7eb;
+    }
+
+    .dropdown:hover .fa-chevron-down {
+        transform: none;
+    }
+
+    /* --- HERO --- */
     .hero-header {
         height: 300px;
     }
@@ -461,6 +526,8 @@ footer {
     .hero-header-content p {
         font-size: 16px;
     }
+
+    /* --- KONTEN --- */
     .tentang-section {
         flex-direction: column;
         padding: 20px;
@@ -478,45 +545,94 @@ footer {
         height: 3px;
         margin: 20px 0;
     }
-    .social-icons {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-    .footer-title {
-        font-size: 16px;
-    }
 
+    /* --- FOOTER: tetap sejajar kiri-kanan --- */
     footer {
-        padding: 20px;
+        padding: 25px 20px 15px 20px;
+        margin-top: 50px;
     }
     .footer-main {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: nowrap;
     }
     .footer-left {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         gap: 10px;
+        min-width: 0;
     }
     .footer-logo {
-        height: 45px;
+        height: 40px;
     }
     .footer-title {
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 1.3;
     }
     .footer-right {
-        gap: 8px;
+        flex-direction: column;
+        gap: 6px;
+        flex-shrink: 0;
     }
     .social-item {
-        font-size: 13px;
+        font-size: 11px;
+        gap: 6px;
     }
     .social-item i {
-        font-size: 18px;
-        width: 20px;
+        font-size: 16px;
+        width: 18px;
     }
     .footer-bottom {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}
+
+/* =========================================
+   HP KECIL (≤480px)
+   ========================================= */
+@media (max-width: 480px) {
+    .logo-img {
+        height: 50px;
+    }
+    .logo-text {
+        font-size: 13px;
+    }
+    .logo-text span {
         font-size: 12px;
+    }
+    .hero-header {
+        height: 250px;
+    }
+    .hero-header-content h1 {
+        font-size: 26px;
+    }
+    .hero-header-content p {
+        font-size: 14px;
+    }
+    .tentang-text h2,
+    .tugas-section h2 {
+        font-size: 22px;
+    }
+    .visi-box h2,
+    .misi-box h2 {
+        font-size: 20px;
+    }
+
+    /* Footer tetap sejajar, hanya diperkecil */
+    .footer-logo {
+        height: 35px;
+    }
+    .footer-title {
+        font-size: 11px;
+    }
+    .social-item {
+        font-size: 10px;
+    }
+    .social-item i {
+        font-size: 14px;
+        width: 16px;
     }
 }

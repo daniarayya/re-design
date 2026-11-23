@@ -18,8 +18,13 @@
                     Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
                 </div>
             </div>
+
+            <!-- Tombol Hamburger (muncul di HP/tablet) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html" class="active">Profil</a></li>
                 
@@ -143,11 +148,36 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // ===== NAVBAR TOGGLE (HAMBURGER) =====
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+                const isOpen = navLinks.classList.contains('show');
+                navToggle.setAttribute('aria-expanded', isOpen);
+                // Ganti ikon bars <-> xmark
+                navToggle.innerHTML = isOpen 
+                    ? '<i class="fas fa-xmark"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+
+            // Tutup menu saat link diklik (kecuali tombol dropdown)
+            navLinks.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768 && !link.closest('.dropdown')) {
+                        navLinks.classList.remove('show');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                });
+            });
+
+            // ===== DROPDOWN LAYANAN =====
             const dropdownContainer = document.querySelector('.dropdown');
             const layananBtn = document.getElementById('layananBtn');
             const dropdownMenu = document.getElementById('dropdownMenu');
 
-            // --- 1. EFEK HOVER (MUNCUL SAAT MOUSE DI ATASNYA) ---
             dropdownContainer.addEventListener('mouseenter', function() {
                 dropdownMenu.classList.add('show');
             });
@@ -156,13 +186,11 @@
                 dropdownMenu.classList.remove('show');
             });
 
-            // --- 2. EFEK KLIK (TETAP BERFUNGSI UNTUK MOBILE / TOGGLE) ---
             layananBtn.addEventListener('click', function(event) {
                 event.preventDefault(); 
                 dropdownMenu.classList.toggle('show');
             });
 
-            // --- 3. TUTUP DROPDOWN JIKA KLIK DI LUAR AREA ---
             window.addEventListener('click', function(event) {
                 if (!event.target.closest('.dropdown')) {
                     if (dropdownMenu.classList.contains('show')) {

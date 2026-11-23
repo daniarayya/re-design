@@ -18,8 +18,10 @@
                     Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
                 </div>
             </div>
-            
-            <ul class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links"id="navLinks">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
                 
@@ -361,6 +363,30 @@
             // Deskripsi: maksimal 20 kata
             document.querySelectorAll('.berita-deskripsi').forEach(function(el) {
                 truncateText(el, 20);
+            });
+        });
+
+        // --- NAVBAR TOGGLE (HAMBURGER) ---
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            const isOpen = navLinks.classList.contains('show');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.innerHTML = isOpen 
+                ? '<i class="fas fa-xmark"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Tutup menu saat link diklik (kecuali tombol dropdown)
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768 && !link.closest('.dropdown')) {
+                    navLinks.classList.remove('show');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
             });
         });
     </script>

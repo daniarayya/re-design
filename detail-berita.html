@@ -6,8 +6,69 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Detail Berita - Biro Otonomi Daerah dan Kerjasama</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Memanggil CSS Eksternal -->
+    <!-- Tetap panggil CSS eksternal kamu -->
     <link rel="stylesheet" href="detail-berita.css">    
+
+    <!-- CSS PAKSAAN UNTUK NAVBAR & FOOTER (Agar dijamin muncul) -->
+    <style>
+        /* Paksa tombol hamburger disembunyikan di desktop */
+        .nav-toggle { display: none; }
+        
+        /* Tampilan di HP / Tablet */
+        @media (max-width: 768px) {
+            /* Paksa tombol muncul */
+            .nav-toggle {
+                display: block !important;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #0b1a3d;
+                cursor: pointer;
+                padding: 8px;
+                margin-left: auto;
+            }
+
+            /* Menu disembunyikan default */
+            .nav-links {
+                display: none !important;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 15px;
+                background-color: #fff;
+                border-top: 1px solid #eee;
+                padding: 10px 0;
+            }
+            
+            /* Muncul saat di-klik */
+            .nav-links.show {
+                display: flex !important;
+            }
+            
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; width: 100%; padding: 12px 20px; }
+
+            /* Paksa footer sejajar kiri-kanan */
+            .footer-main {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                flex-wrap: nowrap !important;
+            }
+            .footer-left {
+                flex-direction: row !important;
+                align-items: center !important;
+            }
+            .footer-logo { height: 40px; }
+            .footer-title { font-size: 11px; text-align: left; }
+            .footer-right {
+                flex-direction: column !important;
+                align-items: flex-end !important;
+            }
+            .social-item { font-size: 10px; }
+            .social-item i { font-size: 14px; }
+        }
+    </style>
 </head>
 <body>
     <!-- Header / Navbar -->
@@ -19,12 +80,16 @@
                     Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
                 </div>
             </div>
+
+            <!-- TOMBOL HAMBURGER -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
                 
-                <!-- Menu Layanan dengan Dropdown -->
                 <li class="dropdown">
                     <a href="#" id="layananBtn">Layanan <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu" id="dropdownMenu">
@@ -40,7 +105,6 @@
         </div>
     </header>
 
-    <!-- Hero Header (Seperti di halaman berita) -->
     <section class="hero-header">
         <div class="hero-header-overlay"></div>
         <img src="img/header.png" alt="Header Banner" class="hero-header-img">
@@ -50,7 +114,6 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="container-berita-detail">
         <div class="berita-card-wrapper">
             <h1 class="judul-berita">Rapat Koordinasi Koreksi dan Verifikasi Lapangan Batas Daerah Brebes–Tegal</h1>
@@ -63,30 +126,24 @@
             </div>
             <article class="isi-berita">
                 <p><strong>Tegal</strong> – Pemerintah Provinsi Jawa Tengah bersama Pemerintah Kabupaten Brebes dan Kabupaten Tegal melaksanakan Rapat Koordinasi Pembahasan Koreksi dan Verifikasi Lapangan Batas Daerah di wilayah perbatasan kedua kabupaten.</p>
-
                 <p>Kegiatan yang berlangsung di Balai Desa Prupuk Selatan, Kecamatan Margasari, dan Balai Desa Pesarean, Kecamatan Pagerbarang, Kabupaten Tegal, dihadiri oleh unsur Tim Penegasan Batas Daerah (TPBD), BPN, Bapperida, Dinas PUPR, Dispermasdes, dan Bagian Pemerintahan dari kedua daerah serta perwakilan Biro Pemerintahan, Otonomi Daerah, dan Kerjasama Provinsi Jawa Tengah.</p>
-
                 <p>Rapat ini menindaklanjuti Berita Acara Rapat Batas Daerah tanggal 13 November 2025, dengan kesepakatan untuk melakukan revisi Permendagri Nomor 59 Tahun 2013 tentang Batas Daerah Kabupaten Brebes dan Kabupaten Tegal.</p>
-                    <h3>Pokok Kesepakatan</h3>
-                    <ul>
-                        <li>Koreksi garis batas dilakukan di area persawahan Desa Kebandungan–Prupuk Selatan berdasarkan data pertanahan dan hasil verifikasi lapangan.</li>
-                        <li>Kerjasama penarikan PBB lintas batas akan difasilitasi oleh Bappenda dan Dispermasdes kedua daerah.</li>
-                        <li>Segmen Jatibarang Kidul–Pesarean masih memerlukan data tambahan dan survey lanjutan.</li>
-                        <li>Monitoring pilar batas akan dilakukan bersama untuk memastikan keakuratan posisi batas.</li>
-                    </ul>
+                <h3>Pokok Kesepakatan</h3>
+                <ul>
+                    <li>Koreksi garis batas dilakukan di area persawahan Desa Kebandungan–Prupuk Selatan berdasarkan data pertanahan dan hasil verifikasi lapangan.</li>
+                    <li>Kerjasama penarikan PBB lintas batas akan difasilitasi oleh Bappenda dan Dispermasdes kedua daerah.</li>
+                    <li>Segmen Jatibarang Kidul–Pesarean masih memerlukan data tambahan dan survey lanjutan.</li>
+                    <li>Monitoring pilar batas akan dilakukan bersama untuk memastikan keakuratan posisi batas.</li>
+                </ul>
                 <p class="penutup">Kegiatan ini menjadi langkah penting dalam memastikan kepastian administrasi batas wilayah dan memperkuat sinergi antar pemerintah daerah dalam penyelesaian batas secara musyawarah dan berkeadilan.</p>
             </article>
 
-            <!-- Tombol Kembali -->
             <div class="back-wrapper">
                 <a href="berita.html" class="btn-kembali"><i class="fas fa-chevron-left"></i> Kembali ke Berita</a>
             </div>
-
         </div>
-
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-main">
             <div class="footer-left">
@@ -98,7 +155,6 @@
                     JAWA TENGAH
                 </div>
             </div>
-
             <div class="footer-right">
                 <div class="social-item">
                     <i class="fab fa-instagram"></i>
@@ -110,40 +166,48 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-divider"></div>
-
         <div class="footer-bottom">
             &copy; 2026 Biro Pemerintahan, Otonomi Daerah & Kerja Sama Provinsi Jawa Tengah
         </div>
     </footer>
 
+    <!-- SCRIPT PAKSAAN -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    // Toggle class show
+                    navLinks.classList.toggle('show');
+                    
+                    // Ganti icon
+                    if (navLinks.classList.contains('show')) {
+                        navToggle.innerHTML = '<i class="fas fa-xmark"></i>';
+                    } else {
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                });
+            }
+
+            // Dropdown Layanan
             const dropdownContainer = document.querySelector('.dropdown');
             const layananBtn = document.getElementById('layananBtn');
             const dropdownMenu = document.getElementById('dropdownMenu');
 
-            dropdownContainer.addEventListener('mouseenter', function() {
-                dropdownMenu.classList.add('show');
-            });
-
-            dropdownContainer.addEventListener('mouseleave', function() {
-                dropdownMenu.classList.remove('show');
-            });
-
-            layananBtn.addEventListener('click', function(event) {
-                event.preventDefault(); 
-                dropdownMenu.classList.toggle('show');
-            });
-
-            window.addEventListener('click', function(event) {
-                if (!event.target.closest('.dropdown')) {
-                    if (dropdownMenu.classList.contains('show')) {
-                        dropdownMenu.classList.remove('show');
-                    }
-                }
-            });
+            if(dropdownContainer && layananBtn && dropdownMenu) {
+                layananBtn.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    dropdownMenu.classList.toggle('show');
+                });
+                
+                // Di HP, dropdown juga ikut hilang kalau menu utama ditutup
+                navToggle.addEventListener('click', function() {
+                    dropdownMenu.classList.remove('show');
+                });
+            }
         });
     </script>
 </body>

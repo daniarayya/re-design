@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="detail-berita.css">    
 </head>
 <body>
+    <!-- Header / Navbar -->
     <header>
         <div class="navbar">
             <div class="logo-container">
@@ -17,9 +18,16 @@
                     Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
                 </div>
             </div>
-            <ul class="nav-links">
+
+            <!-- TOMBOL HAMBURGER -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
+                
                 <li class="dropdown">
                     <a href="#" id="layananBtn">Layanan <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu" id="dropdownMenu">
@@ -27,6 +35,7 @@
                         <li><a href="https://sikejam.jatengprov.go.id/">SIKEJAM</a></li>
                     </ul>
                 </li>
+                
                 <li><a href="dokumen-regulasi.html">Dokumen</a></li>
                 <li><a href="berita.html" class="active">Berita</a></li>
                 <li><a href="kontak-masukan.html">Kontak</a></li>
@@ -110,30 +119,48 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // ===== NAVBAR TOGGLE (HAMBURGER) =====
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('show');
+                    const isOpen = navLinks.classList.contains('show');
+                    navToggle.setAttribute('aria-expanded', isOpen);
+                    navToggle.innerHTML = isOpen 
+                        ? '<i class="fas fa-xmark"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // ===== DROPDOWN LAYANAN =====
             const dropdownContainer = document.querySelector('.dropdown');
             const layananBtn = document.getElementById('layananBtn');
             const dropdownMenu = document.getElementById('dropdownMenu');
 
-            dropdownContainer.addEventListener('mouseenter', function() {
-                dropdownMenu.classList.add('show');
-            });
+            if(dropdownContainer && layananBtn && dropdownMenu) {
+                dropdownContainer.addEventListener('mouseenter', function() {
+                    dropdownMenu.classList.add('show');
+                });
 
-            dropdownContainer.addEventListener('mouseleave', function() {
-                dropdownMenu.classList.remove('show');
-            });
+                dropdownContainer.addEventListener('mouseleave', function() {
+                    dropdownMenu.classList.remove('show');
+                });
 
-            layananBtn.addEventListener('click', function(event) {
-                event.preventDefault(); 
-                dropdownMenu.classList.toggle('show');
-            });
+                layananBtn.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    dropdownMenu.classList.toggle('show');
+                });
 
-            window.addEventListener('click', function(event) {
-                if (!event.target.closest('.dropdown')) {
-                    if (dropdownMenu.classList.contains('show')) {
-                        dropdownMenu.classList.remove('show');
+                window.addEventListener('click', function(event) {
+                    if (!event.target.closest('.dropdown')) {
+                        if (dropdownMenu.classList.contains('show')) {
+                            dropdownMenu.classList.remove('show');
+                        }
                     }
-                }
-            });
+                });
+            }
         });
     </script>
 </body>
