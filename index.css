@@ -1093,17 +1093,3 @@ footer {
         font-size: 10px;
     }
 }
-
-
-/* =========================================
-   13. PENGATURAN TAMBAHAN PROGRAM
-========================================= */
-
-/* Menghilangkan tanda segitiga bawaan browser */
-.program-item summary {
-    list-style: none;
-}
-
-.program-item summary::-webkit-details-marker {
-    display: none;
-}
