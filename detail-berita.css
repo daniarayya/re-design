@@ -387,52 +387,37 @@ footer {
 }
 
 /* =========================================
-   TABLET (≤992px)
+   TABLET & HP (≤992px) - NAVBAR MENU MELAYANG
    ========================================= */
 @media (max-width: 992px) {
     .navbar {
         padding: 15px 30px;
-    }
-    .berita-card-wrapper {
-        padding: 40px 30px;
-        margin-top: -40px;
-    }
-    .hero-header-content {
-        padding-left: 40px;
-    }
-    .hero-header-content h1 {
-        font-size: 40px;
-    }
-    /* Footer tetap sejajar kiri-kanan */
-}
-
-/* =========================================
-   HP / TABLET KECIL (≤768px)
-   ========================================= */
-@media (max-width: 768px) {
-    /* --- NAVBAR TOGGLE --- */
-    .navbar {
-        padding: 15px 20px;
         flex-wrap: wrap;
         position: relative;
     }
 
+    /* Munculkan tombol hamburger di tablet & HP */
     .nav-toggle {
         display: block;
     }
 
+    /* Menu melayang (overlay) di bawah header */
     .nav-links {
-        display: none;
-        flex-direction: column;
+        display: none; /* Sembunyikan default */
+        position: absolute;
+        top: 100%; /* Tepat di bawah header */
+        left: 0;
         width: 100%;
-        gap: 0;
-        margin-top: 15px;
         background-color: #ffffff;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         border-top: 1px solid #e5e7eb;
+        flex-direction: column;
+        gap: 0;
         padding: 10px 0;
-        align-items: stretch;
+        z-index: 999;
     }
 
+    /* Munculkan menu saat diklik */
     .nav-links.show {
         display: flex;
     }
@@ -444,7 +429,7 @@ footer {
     .nav-links a {
         display: block;
         width: 100%;
-        padding: 12px 20px;
+        padding: 12px 30px;
     }
 
     .nav-links a.active {
@@ -474,11 +459,32 @@ footer {
 
     .dropdown-menu a {
         color: #0b1a3d !important;
-        padding: 10px 40px;
+        padding: 10px 50px;
     }
 
     .dropdown-menu a:hover {
         background-color: #e5e7eb;
+    }
+
+    /* Penyesuaian Berita & Hero di Tablet */
+    .berita-card-wrapper {
+        padding: 40px 30px;
+        margin-top: -40px;
+    }
+    .hero-header-content {
+        padding-left: 40px;
+    }
+    .hero-header-content h1 {
+        font-size: 40px;
+    }
+}
+
+/* =========================================
+   HP / TABLET KECIL (≤768px)
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
     }
 
     /* --- HERO --- */
