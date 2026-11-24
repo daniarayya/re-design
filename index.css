@@ -712,6 +712,84 @@ footer {
     color: #d1d5db;
 }
 
+/* =========================================
+   TABLET DAN HP (≤1024px)
+========================================= */
+@media (max-width: 1024px) {
+
+    .navbar {
+        position: relative;
+        padding: 15px 30px;
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+        padding: 8px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        border-top: 1px solid #e5e7eb;
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 30px;
+        border-bottom: none;
+    }
+
+    /* Tampilan menu yang sedang aktif */
+    .nav-links a.active {
+        border-bottom: none;
+        background-color: #e8f0fe;
+        border-left: 4px solid #0b1a3d;
+        font-weight: 600;
+    }
+
+    /* Dropdown layanan */
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: #f3f4f6;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 65px;
+    }
+}
 
 /* =========================================
    10. RESPONSIVE TABLET (MAX-WIDTH: 992PX)

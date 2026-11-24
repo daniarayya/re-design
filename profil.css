@@ -442,7 +442,7 @@ footer {
         border-top: 1px solid #e5e7eb;
         flex-direction: column;
         gap: 0;
-        padding: 10px 0;
+        padding: 10px 20px;
         z-index: 999;
     }
 
