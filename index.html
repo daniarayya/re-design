@@ -9,18 +9,23 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- Header / Navbar -->
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo-container">
+        <div class="navbar">
+            <div class="logo-container">
                 <img src="img/logo.png" alt="Logo Jawa Tengah" class="logo-img">
                 <div class="logo-text">
                     Biro Otonomi Daerah dan<br>Kerjasama<br><span>Pemerintah Provinsi Jawa Tengah</span>
                 </div>
-            </a>
-
-            <ul class="nav-links">
+            </div>
+            <button class="nav-toggle" id="navToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+           
+            <ul class="nav-links"id="navLinks">
                 <li><a href="index.html" class="active">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
+                
                 <!-- Menu Layanan dengan Dropdown -->
                 <li class="dropdown">
                     <a href="#" id="layananBtn">Layanan <i class="fas fa-chevron-down"></i></a>
@@ -29,13 +34,14 @@
                         <li><a href="https://sikejam.jatengprov.go.id/">SIKEJAM</a></li>
                     </ul>
                 </li>
+                
                 <li><a href="dokumen-regulasi.html">Dokumen</a></li>
                 <li><a href="berita.html">Berita</a></li>
                 <li><a href="kontak-masukan.html">Kontak</a></li>
             </ul>
-
-        </nav>
+        </div>
     </header>
+    
     <section class="hero">
         <img src="img/header.png"
              alt="Gedung Pemerintah Provinsi Jawa Tengah"
@@ -71,7 +77,7 @@
             <!-- Berita utama -->
             <article class="featured-news">
 
-                <img src="img/berita-utama.jpg"
+                <img src="img/ForumBerlian.jpeg"
                      alt="Forum Berilian">
 
                 <div class="featured-overlay"></div>
@@ -107,7 +113,7 @@
 
 
                 <a href="berita.html" class="news-small">
-                    <img src="img/berita-2.jpg" alt="Berita kegiatan pertama">
+                    <img src="img/KerjasamaLN.jpg" alt="Berita kegiatan pertama">
 
                     <div>
                         <h3>
@@ -119,7 +125,7 @@
 
 
                 <a href="berita.html" class="news-small">
-                    <img src="img/berita-3.jpg" alt="Berita kegiatan kedua">
+                    <img src="img/RapatOtonomiDaerah.jpg" alt="Berita kegiatan kedua">
 
                     <div>
                         <h3>
@@ -131,7 +137,7 @@
 
 
                 <a href="berita.html" class="news-small">
-                    <img src="img/berita-4.jpg" alt="Berita kegiatan ketiga">
+                    <img src="img/PenghargaanInovasi.png" alt="Berita kegiatan ketiga">
 
                     <div>
                         <h3>
@@ -150,7 +156,7 @@
         <!-- PROGRAM PRIORITAS -->
         <section class="program-section">
 
-            <img src="img/program.jpg"
+            <img src="img/AlamJateng.jpeg"
                 alt="Pemandangan Jawa Tengah"
                 class="program-image">
 
@@ -172,33 +178,78 @@
 
             </div>
 
-            <div class="program-links">
+            
+<div class="program-links">
 
-                <a href="profil.html">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Peningkatan Kapasitas Daerah</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+    <!-- PROGRAM 1 -->
+    <details class="program-item">
+        <summary>
+            <i class="fas fa-chart-line"></i>
+            <span>Peningkatan Kapasitas Daerah</span>
+            <i class="fas fa-arrow-right arrow"></i>
+        </summary>
 
-                <a href="profil.html">
-                    <i class="fas fa-handshake"></i>
-                    <span>Kerjasama Antar Daerah</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+        <div class="program-content">
+            <p>
+                Meningkatkan kemampuan pemerintah daerah melalui
+                pembinaan, pelatihan, dan pengembangan kompetensi
+                aparatur pemerintahan.
+            </p>
+        </div>
+    </details>
 
-                <a href="profil.html">
-                    <i class="fas fa-city"></i>
-                    <span>Dukungan Investasi & Pengembangan Ekonomi</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+    <!-- PROGRAM 2 -->
+    <details class="program-item">
+        <summary>
+            <i class="fas fa-handshake"></i>
+            <span>Kerjasama Antar Daerah</span>
+            <i class="fas fa-arrow-right arrow"></i>
+        </summary>
 
-                <a href="profil.html">
-                    <i class="fas fa-file-alt"></i>
-                    <span>Penguatan Tata Kelola Pemerintahan</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+        <div class="program-content">
+            <p>
+                Mendorong kerja sama antarprovinsi dan kabupaten/kota
+                untuk meningkatkan pembangunan serta pelayanan
+                kepada masyarakat.
+            </p>
+        </div>
+    </details>
 
-            </div>
+    <!-- PROGRAM 3 -->
+    <details class="program-item">
+        <summary>
+            <i class="fas fa-city"></i>
+            <span>Dukungan Investasi & Pengembangan Ekonomi</span>
+            <i class="fas fa-arrow-right arrow"></i>
+        </summary>
+
+        <div class="program-content">
+            <p>
+                Mendukung pengembangan potensi daerah melalui
+                peningkatan investasi dan kerja sama ekonomi
+                untuk mendorong pertumbuhan daerah.
+            </p>
+        </div>
+    </details>
+
+    <!-- PROGRAM 4 -->
+    <details class="program-item">
+        <summary>
+            <i class="fas fa-file-alt"></i>
+            <span>Penguatan Tata Kelola Pemerintahan</span>
+            <i class="fas fa-chevron-down arrow"></i>
+        </summary>
+
+        <div class="program-content">
+            <p>
+                Mendorong penyelenggaraan pemerintahan daerah
+                yang lebih efektif, transparan, dan akuntabel
+                melalui koordinasi serta pembinaan.
+            </p>
+        </div>
+    </details>
+
+</div>
 
         </section>
 
@@ -305,6 +356,13 @@
                         dropdownMenu.classList.remove('show');
                     }
                 }
+            });
+            // Hamburger Navbar
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
             });
         });
     </script>

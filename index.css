@@ -1,5 +1,5 @@
 /* =========================================
-   RESET DAN PENGATURAN DASAR
+   1. RESET DAN PENGATURAN DASAR
 ========================================= */
 
 * {
@@ -14,8 +14,8 @@ html {
 }
 
 body {
-    background: #f4f6f9;
-    color: #17243a;
+    background: #f8f9fa;
+    color: #333333;
     line-height: 1.6;
 }
 
@@ -33,15 +33,17 @@ img {
     max-width: 100%;
 }
 
+
 /* =========================================
-   NAVBAR STYLES
-   ========================================= */
+   2. NAVBAR / HEADER
+========================================= */
+
 header {
     background-color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .navbar {
@@ -51,8 +53,10 @@ header {
     padding: 15px 60px;
     max-width: 1400px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
+/* Logo dan identitas instansi */
 .logo-container {
     display: flex;
     align-items: center;
@@ -76,6 +80,17 @@ header {
     font-size: 14px;
 }
 
+/* Tombol hamburger */
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0b1a3d;
+}
+
+/* Daftar menu navigasi */
 .nav-links {
     display: flex;
     gap: 35px;
@@ -86,8 +101,7 @@ header {
     position: relative;
 }
 
-.nav-links a,
-.dropdown-btn {
+.nav-links a {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -101,8 +115,7 @@ header {
     cursor: pointer;
 }
 
-.nav-links a:hover,
-.dropdown-btn:hover {
+.nav-links a:hover {
     color: #000000;
 }
 
@@ -111,6 +124,7 @@ header {
     font-weight: 600;
 }
 
+/* Ikon panah dropdown */
 .fa-chevron-down {
     font-size: 12px;
     margin-left: 5px;
@@ -118,9 +132,11 @@ header {
     transition: transform 0.3s ease;
 }
 
+
 /* =========================================
-   DROPDOWN LAYANAN (NAVY & PUTIH)
-   ========================================= */
+   3. DROPDOWN MENU LAYANAN
+========================================= */
+
 .dropdown-menu {
     display: block;
     position: absolute;
@@ -128,16 +144,18 @@ header {
     left: 0;
     background-color: #0b1a3d;
     min-width: 160px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 1001;
     padding: 8px 0;
     margin-top: 5px;
-    
+
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
 }
 
 .dropdown-menu.show {
@@ -152,6 +170,7 @@ header {
 
 .dropdown-menu a {
     display: block;
+    width: 100%;
     padding: 10px 20px;
     font-size: 15px;
     color: #ffffff !important;
@@ -163,12 +182,14 @@ header {
     background-color: #1a2f5e;
     color: #ffffff !important;
 }
-/* Panah berputar saat dropdown terbuka (opsional) */
+
 .dropdown:hover .fa-chevron-down {
     transform: rotate(180deg);
 }
+
+
 /* =========================================
-   HERO / BANNER UTAMA
+   4. HERO / BANNER UTAMA
 ========================================= */
 
 .hero {
@@ -254,8 +275,9 @@ header {
     background: #1a2f5e;
 }
 
+
 /* =========================================
-   KONTEN UTAMA
+   5. KONTEN UTAMA
 ========================================= */
 
 .main-content {
@@ -264,8 +286,9 @@ header {
     padding: 60px 40px;
 }
 
+
 /* =========================================
-   BERITA UTAMA DAN BERITA INFORMASI
+   6. BERITA UTAMA DAN BERITA INFORMASI
 ========================================= */
 
 .news-section {
@@ -350,7 +373,7 @@ header {
     padding: 25px;
     height: 400px;
     overflow-y: auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .news-list-heading {
@@ -358,7 +381,7 @@ header {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #eeeeee;
     padding-bottom: 10px;
 }
 
@@ -411,9 +434,10 @@ header {
     color: #777777;
 }
 
-/* =====================================
-   PROGRAM PRIORITAS
-===================================== */
+
+/* =========================================
+   7. PROGRAM PRIORITAS
+========================================= */
 
 .program-section {
     display: grid;
@@ -460,14 +484,14 @@ header {
 .program-description p {
     font-size: 16px;
     line-height: 1.6;
-    color: #444;
+    color: #444444;
     margin-bottom: 20px;
 }
 
 .program-button {
     display: inline-block;
     background: #0b1a3d;
-    color: white;
+    color: #ffffff;
     border-radius: 30px;
     padding: 10px 24px;
     font-size: 15px;
@@ -479,51 +503,64 @@ header {
     background: #1a2f5e;
 }
 
+/* Daftar program yang dapat dibuka */
 .program-links {
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 25px;
     padding: 15px 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.program-links a {
-    display: grid;
-    grid-template-columns: 30px 1fr 20px;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    transition: 0.3s;
+.program-item {
+    border-bottom: 1px solid #999999;
 }
 
-.program-links a:last-child {
+.program-item:last-child {
     border-bottom: none;
 }
 
-.program-links a:hover {
-    transform: translateX(5px);
+.program-item summary {
+    display: grid;
+    grid-template-columns: 58px 1fr 30px;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 5px;
+    cursor: pointer;
+    list-style: none;
 }
 
-.program-links i:first-child {
-    font-size: 20px;
-    color: #3b8af2;
+.program-item summary::-webkit-details-marker {
+    display: none;
 }
 
-.program-links i:last-child {
-    font-size: 14px;
-    color: #0b1a3d;
+.program-item summary i:first-child {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50%;
+    color: #087bff;
+    font-size: 28px;
 }
 
-.program-links span {
-    font-size: 15px;
-    line-height: 1.4;
-    color: #222;
-    font-weight: 600;
+.program-item summary span {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #111111;
+    font-weight: 500;
 }
 
-/* =====================================
-   INFORMASI TERBARU
-===================================== */
+.program-item summary i:last-child {
+    font-size: 22px;
+    color: #087bff;
+}
+
+
+/* =========================================
+   8. INFORMASI TERBARU
+========================================= */
 
 .information-section {
     margin-top: 40px;
@@ -533,10 +570,10 @@ header {
     width: 100%;
     min-height: 150px;
     background: #0b1a3d;
-    color: white;
+    color: #ffffff;
     border-radius: 16px;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .information-card h2 {
@@ -576,7 +613,7 @@ header {
 .information-card li a {
     display: block;
     font-size: 16px;
-    color: white;
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -591,37 +628,42 @@ header {
     color: #9eb4c9;
 }
 
+
+/* =========================================
+   9. FOOTER
+========================================= */
+
 footer {
     background-color: #0b1a3d;
     color: #ffffff;
-    padding: 30px 50px 15px 50px;
+    padding: 30px 50px 15px;
     margin-top: 80px;
-    width: 100%; /* Memastikan lebar penuh */
+    width: 100%;
 }
 
 .footer-main {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    /* max-width: 1200px;  <-- HAPUS BARIS INI */
-    /* margin: 0 auto;     <-- HAPUS BARIS INI */
-    width: 100%;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Bagian kiri: logo dan identitas */
 .footer-left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Menyesuaikan dengan tag <img> di index.html */
-.footer-left img {
+.footer-logo {
     height: 55px;
     width: auto;
+    flex-shrink: 0;
 }
 
-/* Menyesuaikan dengan tag <h3> di index.html */
-.footer-left h3 {
+.footer-title {
     font-size: 14px;
     font-weight: 600;
     line-height: 1.4;
@@ -629,8 +671,8 @@ footer {
     text-align: left;
 }
 
-/* Menyesuaikan dengan class .footer-social di index.html */
-.footer-social {
+/* Bagian kanan: sosial media */
+.footer-right {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -651,26 +693,38 @@ footer {
     text-align: center;
 }
 
+/* Garis pembatas dan copyright */
 .footer-divider {
     width: 100%;
+    max-width: 1200px;
     height: 1px;
     background-color: #ffffff;
     opacity: 0.4;
-    margin: 20px auto 15px auto;
+    margin: 20px auto 15px;
 }
 
 .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
     font-size: 13px;
     font-weight: 400;
     color: #d1d5db;
 }
 
+
+/* =========================================
+   10. RESPONSIVE TABLET (MAX-WIDTH: 992PX)
+========================================= */
+
 @media (max-width: 992px) {
+
+    /* Navbar */
     .navbar {
         padding: 15px 30px;
     }
 
+    /* Berita */
     .news-section {
         grid-template-columns: 1fr;
     }
@@ -683,6 +737,7 @@ footer {
         height: auto;
     }
 
+    /* Program prioritas */
     .program-section {
         grid-template-columns: 1fr;
         padding: 25px;
@@ -693,19 +748,89 @@ footer {
     }
 }
 
+
+/* =========================================
+   11. RESPONSIVE HP / TABLET KECIL (MAX-WIDTH: 768PX)
+========================================= */
+
 @media (max-width: 768px) {
+
+    /* Navbar */
     .navbar {
         padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 
     .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    .nav-links a.active {
+        background-color: #f1f3f6;
+        border-bottom: none;
+        border-left: 4px solid #0b1a3d;
+        padding-left: 11px;
+    }
+
+    /* Dropdown pada HP */
+    .dropdown-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        min-width: 100%;
+        margin-top: 0;
+        padding: 5px 0;
+        box-shadow: none;
+        border-radius: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background-color: #f1f3f6;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 30px;
+        color: #0b1a3d !important;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #e2e6ec;
+        color: #0b1a3d !important;
+    }
+
+    /* Hero */
     .hero {
         height: 400px;
     }
@@ -722,10 +847,12 @@ footer {
         font-size: 16px;
     }
 
+    /* Konten utama */
     .main-content {
         padding: 40px 20px;
     }
 
+    /* Berita */
     .featured-news {
         height: 300px;
     }
@@ -754,49 +881,87 @@ footer {
         height: 150px;
     }
 
-    /* Responsive Footer */
+    /* Program prioritas */
+    .program-section {
+        gap: 20px;
+    }
+
+    .program-description {
+        padding: 0;
+    }
+
+    /* Footer */
     footer {
         padding: 20px;
     }
-    
+
     .footer-main {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
         gap: 20px;
     }
-    
+
     .footer-left {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         gap: 10px;
     }
 
-    .footer-left img {
+    .footer-logo {
         height: 45px;
     }
 
-    .footer-left h3 {
+    .footer-title {
         font-size: 13px;
     }
-    
+
     .social-item {
         font-size: 13px;
     }
-    
+
     .social-item i {
         font-size: 18px;
         width: 20px;
     }
-    
+
     .footer-bottom {
         font-size: 12px;
     }
 }
 
+
+/* =========================================
+   12. RESPONSIVE HP KECIL (MAX-WIDTH: 480PX)
+========================================= */
+
 @media (max-width: 480px) {
-    .logo-container {
-        flex-direction: column;
-        text-align: center;
+
+    /* Logo navbar */
+    .logo-img {
+        height: 50px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+    }
+
+    .logo-text span {
+        font-size: 11px;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    /* Hero */
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
     }
 
     .hero-content h1 {
@@ -807,8 +972,42 @@ footer {
         font-size: 14px;
     }
 
-    .hero {
-        height: 350px;
+    /* Konten utama */
+    .main-content {
+        padding: 30px 15px;
+    }
+
+    /* Berita */
+    .featured-news {
+        height: 280px;
+    }
+
+    .featured-content {
+        left: 15px;
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .featured-content h2 {
+        font-size: 18px;
+    }
+
+    .featured-meta {
+        font-size: 12px;
+    }
+
+    .news-list {
+        padding: 15px;
+    }
+
+    .news-list-heading h2 {
+        font-size: 17px;
+    }
+
+    /* Program prioritas */
+    .program-section {
+        padding: 20px 15px;
+        gap: 20px;
     }
 
     .program-image {
@@ -818,4 +1017,93 @@ footer {
     .program-description h2 {
         font-size: 22px;
     }
+
+    .program-description p {
+        font-size: 14px;
+    }
+
+    .program-links {
+        padding: 12px;
+    }
+
+    .program-item summary {
+        grid-template-columns: 45px 1fr 25px;
+        gap: 8px;
+    }
+
+    .program-item summary i:first-child {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .program-item summary span {
+        font-size: 15px;
+    }
+
+    /* Informasi */
+    .information-card {
+        padding: 20px 15px;
+    }
+
+    .information-card h2 {
+        font-size: 18px;
+    }
+
+    .information-card li a {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 15px 12px;
+    }
+
+    .footer-main {
+        gap: 15px;
+    }
+
+    .footer-left {
+        gap: 8px;
+    }
+
+    .footer-logo {
+        height: 38px;
+    }
+
+    .footer-title {
+        font-size: 11px;
+    }
+
+    .social-item {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .social-item i {
+        font-size: 15px;
+        width: 18px;
+    }
+
+    .footer-divider {
+        margin: 15px auto 10px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================
+   13. PENGATURAN TAMBAHAN PROGRAM
+========================================= */
+
+/* Menghilangkan tanda segitiga bawaan browser */
+.program-item summary {
+    list-style: none;
+}
+
+.program-item summary::-webkit-details-marker {
+    display: none;
 }
