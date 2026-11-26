@@ -1,28 +1,27 @@
 # Benchmarking
-
 ## Website yang Dibandingkan
 
-### Website A: [Nama]
-- **URL:** [url]
-- **Halaman sejenis:** [deskripsi]
+### Website A: [Biro Pemerintahan Otonomi Daerah dan Kerja Sama Provinsi Jawa Tengah]
+- **URL:** (https://biropemotdaks.jatengprov.go.id)
+- **Halaman sejenis:** [Website Biro Pemerintahan Otonomi Daerah Provisi Jawa Tengah]
 - **Kelebihan:**
   - [kelebihan 1]
   - [kelebihan 2]
 - **Kekurangan:**
   - [kekurangan 1]
 - **Screenshot:**
-  ![Website A](../assets/benchmark-a.png)
+  ![Website A](../research/assets/benchmark-a.png)
 
-### Website B: [Nama]
-- **URL:** [url]
-- **Halaman sejenis:** [deskripsi]
+### Website B: [Biro Pemerintahan dan Otonomi Daerah Setda Provinsi Jawa Timur]
+- **URL:** (https://ropem.jatimprov.go.id)
+- **Halaman sejenis:** [Website Biro Pemerintahan Otonomi Daerah Provisi Jawa Timur]
 - **Kelebihan:**
   - [kelebihan 1]
   - [kelebihan 2]
 - **Kekurangan:**
   - [kekurangan 1]
 - **Screenshot:**
-  ![Website B](../assets/benchmark-b.png)
+  ![Website B](../research/assets/benchmark-b.png)
 
 ## Perbandingan Fitur
 
