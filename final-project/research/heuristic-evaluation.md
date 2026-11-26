@@ -36,11 +36,11 @@
 **Screenshot Bukti:**
 ![Screenshot](..assets/heurictic-2.png)
 
-**Dampak ke Pengguna:** //BENERIN INI
-- Dapat menimbulkan kebingungan bagi pengguna.
+**Dampak ke Pengguna:**
+- Dapat menyulitkan pengguna untuk menavigasi laman.
 
 **Rekomendasi:**
-- Memberikan loading indicator.
+- Memakai bahasa singkat yang lebih mudah dimengerti massal.
 
 
 ## Heuristic #3: User Control and Freedom
