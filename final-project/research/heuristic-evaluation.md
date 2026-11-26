@@ -51,7 +51,7 @@
 - Pada proses pengiriman Saran & Masukan, user langsung diarahkan untuk melanjutkan proses, dimana tidak ada opsi untuk kembali, dan kalau kembali progress hilang.
 
 **Screenshot Bukti:**
-![Screenshot](../research/assets/assets/heuristic-3)
+![Screenshot](..//research/assets/heuristic-3.png)
 
 **Dampak ke Pengguna:**
 - Dapat menimbulkan kebingungan, frustasi jika salah tekan/proses. 
@@ -75,7 +75,7 @@
 - Pada proses pengetikan saran dan masukan, pengecekan field nomor telepon, nama, dan pesan sangat minimal.
 
 **Screenshot Bukti:**
-![Screenshot](..src/assets/heuristic-5)
+![Screenshot](../research/assets/heuristic-5.png)
 
 **Dampak ke Pengguna:**
 - Pengguna dapat memasukan info field asal-asalan dan tetap mengirim form saran dan masukan.
@@ -98,7 +98,7 @@
 - Navigasi cepat hanya dapat menggunakan menu navbar, dimana ia juga tidak tertata rapi.
 
 **Screenshot Bukti:**
-![Screenshot](..src/assets/heuristic-7)
+![Screenshot](../research/assets/heuristic-7.png)
 
 **Dampak ke Pengguna:**
 - Pengguna tidak dapat secara naluri mana yang harus dipilih untuk menuju layanan yang mereka pilih, perluh mencermati.
@@ -115,8 +115,8 @@
 - Gambar pada hero banner ikut stretch mengikuti ukuran layar.
 
 **Screenshot Bukti:**
-![Screenshot](..src/assets/heuristic-8-propotional.png)
-![Screenshot](..src/assets/heuristic-8-stretched.png)
+![Screenshot](../research/assets/heuristic-8-propotional.png)
+![Screenshot](../research/assets/heuristic-8-stretched.png)
 
 **Dampak ke Pengguna:**
 - Menurunkan kesan profesional dan kejelasan visual.
@@ -148,7 +148,7 @@
 - Tidak terdapat panduan atau alur yang bisa diikuti, namun tampilan sudah sangat sederhana.
 
 **Screenshot Bukti:**
-![Screenshot](..src/assets/heuristic-10.png)
+![Screenshot](../research/assets/heuristic-10.png)
 
 **Dampak ke Pengguna:**
 - Pengguna yang belum familiar dengan alur tidak memiliki rujukan untuk diikuti.
