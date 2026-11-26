@@ -18,7 +18,8 @@
 - Beberapa perpindahan halaman tidak terdapat indikator memuat, tanpa transisi.
 
 **Screenshot Bukti:**
-![Screenshot](..src/assets/heuristic-1-memuat.png)
+![Screenshot](../research/assets/heuristic-1-memuat.png)
+![Screenshot](../research/assets/heuristic-1-navbar.png)
 
 **Dampak ke Pengguna:**
 - Dapat menimbulkan kebingungan bagi pengguna.
@@ -34,7 +35,7 @@
 - Penamaan bagian dengan nama yang sulit dimengerti.
 
 **Screenshot Bukti:**
-![Screenshot](..src/assets/heuristic-2.png)
+![Screenshot](../research/assets/heuristic-2.png)
 
 **Dampak ke Pengguna:**
 - Dapat menyulitkan pengguna untuk menavigasi laman.
@@ -50,7 +51,7 @@
 - Pada proses pengiriman Saran & Masukan, user langsung diarahkan untuk melanjutkan proses, dimana tidak ada opsi untuk kembali, dan kalau kembali progress hilang.
 
 **Screenshot Bukti:**
-![Screenshot](..src/assets/heuristic-3)
+![Screenshot](../research/assets/assets/heuristic-3)
 
 **Dampak ke Pengguna:**
 - Dapat menimbulkan kebingungan, frustasi jika salah tekan/proses. 
