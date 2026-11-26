@@ -40,7 +40,7 @@
 ## Perbandingan Fitur
 
 | Fitur | Website Target | Website A | Website B | Desain Ulang Kami |
-|---|---|---|---|
+|---|---|---|---|---|
 | Quick-link | ❌ Tidak ada | ✅ Ada | ✅ Ada | ✅ Ada |
 | File Download | ✅ Ada | ✅ Ada | ✅ Ada | ✅ Ada |
 | Navigation Bar | ✅ Ada | ✅ Ada | ✅ Ada | ✅ Ada |
