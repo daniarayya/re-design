@@ -2,7 +2,7 @@
 
 ## Informasi Umum
 - **Nama Website:** [Biro Pemerintahan Otonomi Daerah dan Kerja Sama]
-- **URL:** [(https://biropemotdaks.jatengprov.go.id)]
+- **URL:** (https://biropemotdaks.jatengprov.go.id)
 - **Halaman yang diriset:** [Beranda]
 - **Tanggal Riset:** [26/11/2026]
 - **Anggota Kelompok:**
@@ -18,7 +18,7 @@
 - Beberapa perpindahan halaman tidak terdapat indikator memuat, tanpa transisi.
 
 **Screenshot Bukti:**
-![Screenshot](../assets/heuristic-1-memuat.png)
+![Screenshot](..src/assets/heuristic-1-memuat.png)
 
 **Dampak ke Pengguna:**
 - Dapat menimbulkan kebingungan bagi pengguna.
@@ -34,7 +34,7 @@
 - Penamaan bagian dengan nama yang sulit dimengerti.
 
 **Screenshot Bukti:**
-![Screenshot](..assets/heuristic-2.png)
+![Screenshot](..src/assets/heuristic-2.png)
 
 **Dampak ke Pengguna:**
 - Dapat menyulitkan pengguna untuk menavigasi laman.
@@ -50,7 +50,7 @@
 - Pada proses pengiriman Saran & Masukan, user langsung diarahkan untuk melanjutkan proses, dimana tidak ada opsi untuk kembali, dan kalau kembali progress hilang.
 
 **Screenshot Bukti:**
-![Screenshot](../assets/heuristic-3)
+![Screenshot](..src/assets/heuristic-3)
 
 **Dampak ke Pengguna:**
 - Dapat menimbulkan kebingungan, frustasi jika salah tekan/proses. 
@@ -74,7 +74,7 @@
 - Pada proses pengetikan saran dan masukan, pengecekan field nomor telepon, nama, dan pesan sangat minimal.
 
 **Screenshot Bukti:**
-![Screenshot](../assets/heuristic-5)
+![Screenshot](..src/assets/heuristic-5)
 
 **Dampak ke Pengguna:**
 - Pengguna dapat memasukan info field asal-asalan dan tetap mengirim form saran dan masukan.
@@ -97,7 +97,7 @@
 - Navigasi cepat hanya dapat menggunakan menu navbar, dimana ia juga tidak tertata rapi.
 
 **Screenshot Bukti:**
-![Screenshot](../assets/heuristic-7)
+![Screenshot](..src/assets/heuristic-7)
 
 **Dampak ke Pengguna:**
 - Pengguna tidak dapat secara naluri mana yang harus dipilih untuk menuju layanan yang mereka pilih, perluh mencermati.
@@ -114,8 +114,8 @@
 - Gambar pada hero banner ikut stretch mengikuti ukuran layar.
 
 **Screenshot Bukti:**
-![Screenshot](../assets/heuristic-8-propotional.png)
-![Screenshot](../assets/heuristic-8-stretched.png)
+![Screenshot](..src/assets/heuristic-8-propotional.png)
+![Screenshot](..src/assets/heuristic-8-stretched.png)
 
 **Dampak ke Pengguna:**
 - Menurunkan kesan profesional dan kejelasan visual.
@@ -147,10 +147,32 @@
 - Tidak terdapat panduan atau alur yang bisa diikuti, namun tampilan sudah sangat sederhana.
 
 **Screenshot Bukti:**
-![Screenshot](../assets/heuristic-10.png)
+![Screenshot](..src/assets/heuristic-10.png)
 
 **Dampak ke Pengguna:**
 - Pengguna yang belum familiar dengan alur tidak memiliki rujukan untuk diikuti.
 
 **Rekomendasi:**
 - Menambahkan bagian bantuan ringkas (FAQ) serta petunjuk bantuan.
+
+
+## Ringkasan Heuristic Evaluation
+
+| # | Heuristik | Skor | Jumlah Temuan |
+|---|---|---|---|
+| 1 | Error Prevention | 3 | 1 |
+| 2 | Help Users Recognize, Diagnose, and Recover from Errors | 3 | 1 |
+| 3 | User Control and Freedom | 2 | 1 |
+| 4 | Visibility of System Status | 1 | 2 |
+| 5 | Aesthetic and Minimalist Design | 1 | 2 |
+| 6 | Match Between the System and the Real World | 1 | 1 |
+| 7 | Flexibility and Efficiency of Use | 1 | 1 |
+| 8 | Help and Documentation | 1 | 1 |
+| 9 | Consistency and Standards | 0 | 0 |
+| 10 | Recognition Rather Than Recall | 0 | 0 |
+| **Total** | | **14** | **10** |
+
+### Top 3 Pain Point Terbesar:
+1. Validasi kolom pada form Saran & Masukan sangat minimal (nomor telepon, nama, pesan), sehingga input asal-asalan/tidak sesuai format berpotensi lolos dan menyulitkan tindak lanjut *(Heuristic #5)*.
+2. Pesan error maupun status hanya berupa teks singkat/teknis (seperti `"Page under maintenance"` atau `"419 - Page Expired"`) tanpa penjelasan penyebab dan langkah pemulihan bagi pengguna awam *(Heuristic #9)*.
+3. Pengguna tidak memiliki opsi kembali yang aman saat proses pengiriman Saran & Masukan, dan kembali dari alur membuat progres isian hilang *(Heuristic #3)*.
