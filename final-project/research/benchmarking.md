@@ -3,23 +3,25 @@
 
 ### Website A: [Biro Pemerintahan Otonomi Daerah dan Kerja Sama Provinsi Jawa Tengah]
 - **URL:** (https://biropemotdaks.jatengprov.go.id)
-- **Halaman sejenis:** [Website Biro Pemerintahan Otonomi Daerah Provisi Jawa Tengah]
+- **Halaman sejenis:** [Beranda Website Biro Pemerintahan Otonomi Daerah Provisi Jawa Tengah]
 - **Kelebihan:**
-  - [kelebihan 1]
-  - [kelebihan 2]
+  - Tampilan dan alur sederhana yang mudah diterima.
 - **Kekurangan:**
-  - [kekurangan 1]
+  - Isi konten, navigasi dan kualitas pelayanan pengguna yang kurang optimal.
+  - Tampilan konten utama yang masih lawas.
+  - Kurangnya arahan dan instruksi bantuan jikalau ada masalah.
 - **Screenshot:**
   ![Website A](../research/assets/benchmark-a.png)
 
 ### Website B: [Biro Pemerintahan dan Otonomi Daerah Setda Provinsi Jawa Timur]
 - **URL:** (https://ropem.jatimprov.go.id)
-- **Halaman sejenis:** [Website Biro Pemerintahan Otonomi Daerah Provisi Jawa Timur]
+- **Halaman sejenis:** [Beranda Website Biro Pemerintahan Otonomi Daerah Provisi Jawa Timur]
 - **Kelebihan:**
-  - [kelebihan 1]
-  - [kelebihan 2]
+  - Tampilan baharu dan konsisten yang memanjakan mata.
+  - Arah dan alur terstruktur yang membawa kesan profesional.
+  - Navigasi laman sangat mudah dan tidak membingungkan.
 - **Kekurangan:**
-  - [kekurangan 1]
+  - Kurangnya kapabilitas tampilan responsive.
 - **Screenshot:**
   ![Website B](../research/assets/benchmark-b.png)
 
