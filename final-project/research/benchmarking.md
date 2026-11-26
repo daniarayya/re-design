@@ -49,6 +49,6 @@
 | Carausel & Animation | ❌ Tidak ada | ✅ Ada | ✅ Ada(Sebagian) | ✅ Ada(Sebagian) |
 
 ## Pelajaran dari Benchmarking:
-1. [Insight 1 — fitur/praktik terbaik yang ingin diadopsi]
-2. [Insight 2 — apa yang perlu dihindari]
-3. [Insight 3 — kesempatan untuk berbeda/diferensiasi]
+1. [Insight 1 — Tampilan minimalis dan konsisten UI]
+2. [Insight 2 — Kompleksitas berlebih yang tidak perluh]
+3. [Insight 3 — Kesempatan untuk menjadi berbeda dengan pendekatan tersendiri melalui implementasi]
