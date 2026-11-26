@@ -46,7 +46,7 @@
 | Navigation Bar | ✅ Ada | ✅ Ada | ✅ Ada | ✅ Ada |
 | Global Search | ❌ Tidak ada | ✅ Ada | ❌ Tidak ada | ❌ Tidak ada |
 | Pop-up | ⚠️ Sebagian | ✅ Ada | ❌ Tidak ada | ❌ Tidak ada |
-| Photo Carausel | ❌ Tidak ada | ✅ Ada | ❌ Tidak ada | ✅ Ada |
+| Carausel & Animation | ❌ Tidak ada | ✅ Ada | ✅ Ada(Sebagian) | ✅ Ada(Sebagian) |
 
 ## Pelajaran dari Benchmarking:
 1. [Insight 1 — fitur/praktik terbaik yang ingin diadopsi]
