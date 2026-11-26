@@ -11,7 +11,6 @@
   - [Erly Mirta Khudhaifiyah] — [UI/UX Designer & Frontend Developer]
 
 ## Heuristic #1: Visibility of System Status
-
 **Skor Pelanggaran (0–4):** 1.
 
 **Temuan:**
@@ -19,24 +18,50 @@
 - Beberapa perpindahan halaman tidak terdapat indikator memuat, tanpa transisi.
 
 **Screenshot Bukti:**
-![Screenshot](../assets/heuristic-1.png)
+![Screenshot](../assets/heuristic-1-memuat.png)
 
 **Dampak ke Pengguna:**
 - Dapat menimbulkan kebingungan bagi pengguna.
 
-**Kaitan dengan Rekomendasi Desain:**
+**Rekomendasi:**
 - Memberikan loading indicator.
 
 
+## Heuristic #2: Match Between the System and the Real World
+**Skor Pelanggaran (0–4):** 1.
 
-# Riset UI/UX — Proyek Akhir
+**Temuan:**
+- Penamaan bagian dengan nama yang sulit dimengerti.
 
-## Informasi Umum
-- **Nama Website:** [nama website]
-- **URL:** [url]
-- **Halaman yang diriset:** [nama/spesifikasi halaman]
-- **Tanggal Riset:** [tanggal]
-- **Anggota Kelompok:**
-  - [Nama 1] — [peran]
-  - [Nama 2] — [peran]
-  - [Nama 3] — [peran]
+**Screenshot Bukti:**
+![Screenshot](..assets/heurictic-2.png)
+
+**Dampak ke Pengguna:** //BENERIN INI
+- Dapat menimbulkan kebingungan bagi pengguna.
+
+**Rekomendasi:**
+- Memberikan loading indicator.
+
+
+## Heuristic #3: User Control and Freedom
+**Skor Pelanggaran (0–4):** 2.
+
+**Temuan:**
+- Pada proses pengiriman Saran & Masukan, user langsung diarahkan untuk melanjutkan proses, dimana tidak ada opsi untuk kembali, dan kalau kembali progress hilang.
+
+**Screenshot Bukti:**
+![Screenshot](../assets/heuristic-3)
+
+**Dampak ke Pengguna:**
+- Dapat menimbulkan kebingungan, frustasi jika salah tekan/proses. 
+
+**Rekomendasi:**
+- Memberikan opsi kembali untuk memastikan, progress tersimpan.
+- Meletakkan opsi login ditempat lain.
+
+
+## Heuristic #4: Consistency and Standarts
+**Skor Pelanggaran (0–4):** 0.
+
+**Temuan:**
+- Tidak ditemukan pelanggaran signfikan. 
